@@ -1,0 +1,25 @@
+{
+  "name": "test-perf-summary",
+  "description": "Print the results of test-perf in a table",
+  "version": "0.0.1",
+  "author": "Staś Małolepszy <stas@mozilla.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stasm/test-perf-summary.git"
+  },
+  "keywords": [
+    "firefoxos",
+    "b2g"
+  ],
+  "bin": "./index.js",
+  "dependencies": {
+    "minimist": "~0.1.0",
+    "ttest": "~0.3.0",
+    "summary": "~0.3.0",
+    "easy-table": "~0.3.0"
+  },
+  "engine": {
+    "node": ">=0.10 <0.11"
+  }
+}
