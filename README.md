@@ -1,5 +1,8 @@
-test-perf-summary
-=================
+test-perf-summary [![Build Status][travisimage]][travislink]
+============================================================
+
+[travisimage]: https://travis-ci.org/stasm/test-perf-summary.png?branch=master
+[travislink]: https://travis-ci.org/stasm/test-perf-summary
 
 Pretty-print the results of Gaia's make test-perf.
 
