@@ -9,16 +9,12 @@ var table = require('./table.js');
 function printAll(deltaMode, results) {
   var t;
   for (var app in results[0]) {
-    if (app !== 'calendar') {
-      continue;
-    }
     if (deltaMode && results[1][app]) {
       t = table.delta(app, results[0][app], results[1][app]);
     } else {
       t = table.summary(app, results[0][app]);
     }
-    console.log(t);
-    //util.puts(t.toString());
+    util.puts(t.toString());
   }
 }
 

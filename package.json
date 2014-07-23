@@ -1,7 +1,7 @@
 {
   "name": "test-perf-summary",
   "description": "Print the results of test-perf in a table",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Staś Małolepszy <stas@mozilla.com>",
   "license": "MIT",
   "repository": {
