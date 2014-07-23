@@ -17,7 +17,7 @@ suite('Delta builder', function() {
         path.join(__dirname, 'fixtures', 'output2.json')
       ]
     };
-    tps.execute(argv, function(delta, res) {
+    tps.execute(argv, function(argv, res) {
       results = res;
       done();
     });

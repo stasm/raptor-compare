@@ -16,7 +16,7 @@ suite('Summary builder', function() {
         path.join(__dirname, 'fixtures', 'output1.json')
       ]
     };
-    tps.execute(argv, function(delta, res) {
+    tps.execute(argv, function(argv, res) {
       results = res;
       done();
     });

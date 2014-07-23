@@ -6,10 +6,17 @@ var util = require('util');
 var parse = require('./parse.js').parse;
 var table = require('./table.js');
 
-function printAll(deltaMode, results) {
+function printAll(argv, results) {
   var t;
-  for (var app in results[0]) {
-    if (deltaMode && results[1][app]) {
+  var appNames = [];
+  if (argv.app) {
+    appNames = appNames.concat(argv.app);
+  } else {
+    appNames = Object.keys(results[0]);
+  }
+
+  for (var i = 0, app; app = appNames[i]; i++) {
+    if (argv.delta && results[1][app]) {
       t = table.delta(app, results[0][app], results[1][app]);
     } else {
       t = table.summary(app, results[0][app]);
@@ -30,7 +37,7 @@ exports.execute = function(argv, callback) {
 
     results.push(parse(JSON.parse(data.toString())));
     if (--len === 0) {
-      callback(argv.delta, results);
+      callback(argv, results);
     }
   }
 
