@@ -10,8 +10,8 @@ Pretty-print the results of Gaia's `make test-perf`.
 Summary mode
 ------------
 
-The summary mode prints basic descriptive statistics like media, mean and 
-standard deviation in a table.
+The summary mode prints basic descriptive statistics (median, mean and 
+standard deviation) in a table.
 
     $ test-perf-summary file1.json
 
