@@ -12,7 +12,7 @@
     "firefoxos",
     "b2g"
   ],
-  "bin": "./index.js",
+  "bin": "./bin/cli.js",
   "dependencies": {
     "minimist": "~0.1.0",
     "ttest": "~0.3.0",
