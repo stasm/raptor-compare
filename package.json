@@ -1,7 +1,7 @@
 {
   "name": "test-perf-summary",
-  "description": "Print the results of test-perf in a table",
-  "version": "0.0.3",
+  "description": "Pretty-print the results of Gaia's test-perf",
+  "version": "0.0.4",
   "author": "Staś Małolepszy <stas@mozilla.com>",
   "license": "MIT",
   "repository": {
