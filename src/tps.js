@@ -6,19 +6,23 @@ var util = require('util');
 var parse = require('./parse.js').parse;
 var table = require('./table.js');
 
-function print(deltaMode, results) {
+function printAll(deltaMode, results) {
   var t;
   for (var app in results[0]) {
-    if (deltaMode) {
+    if (app !== 'calendar') {
+      continue;
+    }
+    if (deltaMode && results[1][app]) {
       t = table.delta(app, results[0][app], results[1][app]);
     } else {
       t = table.summary(app, results[0][app]);
     }
-    util.puts(t.toString());
+    console.log(t);
+    //util.puts(t.toString());
   }
 }
 
-exports.execute = function(argv) {
+exports.execute = function(argv, callback) {
   var len = argv._.length;
   var results = [];
 
@@ -30,7 +34,7 @@ exports.execute = function(argv) {
 
     results.push(parse(JSON.parse(data.toString())));
     if (--len === 0) {
-      print(argv.delta, results);
+      callback(argv.delta, results);
     }
   }
 
@@ -39,4 +43,6 @@ exports.execute = function(argv) {
   });
 };
 
-
+exports.print = function(argv) {
+  exports.execute(argv, printAll);
+};

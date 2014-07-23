@@ -1,0 +1,3754 @@
+[
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2014-07-22T19:05:57.565Z",
+    "end": "2014-07-22T19:17:39.031Z",
+    "duration": 701466,
+    "application": "calendar"
+  },
+  "failures": [],
+  "passes": []
+}
+,
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2014-07-22T19:17:39.300Z",
+    "end": "2014-07-22T19:24:50.362Z",
+    "duration": 431062,
+    "application": "clock"
+  },
+  "failures": [
+    {
+      "title": "startup >",
+      "fullTitle": "startup event test > clock > startup >",
+      "duration": 62315,
+      "stack": "{ name: 'ScriptTimeout',\n  stack: 'ScriptTimeout: (28) timed out\\nRemote Stack:\\n<none>\\n    at Error.MarionetteError (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/error.js:67:13)\\n    at Object.Client._handleCallback (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:476:19)\\n    at /srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:510:21\\n    at TcpSync.send (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/drivers/tcp-sync.js:100:10)\\n    at Object.send (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:457:36)\\n    at Object.Client._sendCommand (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:503:19)\\n    at Object._executeScript (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:1468:19)\\n    at Object.executeAsyncScript (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:1249:19)\\n    at Object.PerfTestApp.waitForPerfEvents (/srv/moz/gaia/tests/performance/app.js:95:17)\\n    at Object.PerformanceHelper.waitForPerfEvent (/srv/moz/gaia/tests/performance/performance_helper.js:190:16)\\n    at /srv/moz/gaia/tests/performance/startup_events_test.js:98:25\\n    at Object.PerformanceHelper.task (/srv/moz/gaia/tests/performance/performance_helper.js:178:7)\\n    at /srv/moz/gaia/tests/performance/performance_helper.js:164:16\\n    at Object.Client.waitForSync (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:668:18)\\n    at Object.Client.waitFor (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:650:60)\\n    at Object.Helper.delay (/srv/moz/gaia/tests/js-marionette/helper.js:28:12)\\n    at Object.PerformanceHelper.delay (/srv/moz/gaia/tests/performance/performance_helper.js:186:24)\\n    at trigger (/srv/moz/gaia/tests/performance/performance_helper.js:163:14)\\n    at Object.PerformanceHelper.repeatWithDelay (/srv/moz/gaia/tests/performance/performance_helper.js:168:7)\\n    at Context.<anonymous> (/srv/moz/gaia/tests/performance/startup_events_test.js:93:23)\\n    at callFn (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:223:21)\\n    at Test.Runnable.run (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:216:7)\\n    at Runner.runTest (/srv/moz/gaia/node_modules/mocha/lib/runner.js:373:10)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runner.js:451:12\\n    at next (/srv/moz/gaia/node_modules/mocha/lib/runner.js:298:14)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runner.js:308:7\\n    at next (/srv/moz/gaia/node_modules/mocha/lib/runner.js:246:23)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runner.js:270:7\\n    at done (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:185:5)\\n    at callFn (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:228:7)\\n    at Hook.Runnable.run (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:216:7)\\n    at next (/srv/moz/gaia/node_modules/mocha/lib/runner.js:258:10)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runner.js:270:7\\n    at done (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:185:5)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runnable.js:199:9\\n    at Object.executeHook (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:369:18)\\n    at process._tickCallback (node.js:415:13)',\n  type: 'ScriptTimeout',\n  constructorName: 'Error',\n  expected: null,\n  actual: null }",
+      "index": 0,
+      "msg": "",
+      "actual": null,
+      "expected": null
+    }
+  ],
+  "passes": [
+    {
+      "title": "startup time ",
+      "fullTitle": "startup test > clock > startup time ",
+      "duration": 368089,
+      "mozPerfDurations": [
+        422,
+        376,
+        410,
+        421,
+        419,
+        431,
+        442,
+        420,
+        418,
+        485,
+        411,
+        409,
+        433,
+        419,
+        452,
+        403,
+        396,
+        461,
+        446,
+        430,
+        433,
+        466,
+        456,
+        435,
+        438,
+        448,
+        445,
+        431,
+        465,
+        428
+      ],
+      "mozPerfDurationsAverage": 431.6333333333333,
+      "mozPerfMemory": [
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.8,
+            "pss": 17,
+            "rss": 30,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 170.8,
+            "pss": 176.8,
+            "rss": 191.4,
+            "vsize": 429.1
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.2,
+            "pss": 17.4,
+            "rss": 30.5,
+            "vsize": 79.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 175.7,
+            "pss": 181.7,
+            "rss": 196.3,
+            "vsize": 430.2
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.8,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 171.6,
+            "pss": 177.6,
+            "rss": 192.2,
+            "vsize": 430.4
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.9,
+            "pss": 18.2,
+            "rss": 31.2,
+            "vsize": 80.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 176.6,
+            "pss": 182.6,
+            "rss": 197.2,
+            "vsize": 433.7
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.8,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 173,
+            "pss": 179,
+            "rss": 193.7,
+            "vsize": 434.4
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.8,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 178.2,
+            "pss": 184.2,
+            "rss": 198.8,
+            "vsize": 437.6
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.3,
+            "pss": 17.6,
+            "rss": 30.7,
+            "vsize": 79.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 174.5,
+            "pss": 180.5,
+            "rss": 195.1,
+            "vsize": 439.3
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.8,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 180.1,
+            "pss": 186.1,
+            "rss": 200.7,
+            "vsize": 442.6
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.8,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 176.3,
+            "pss": 182.3,
+            "rss": 196.9,
+            "vsize": 441.5
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.8,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 184.5,
+            "pss": 190.4,
+            "rss": 205.1,
+            "vsize": 446.6
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.2,
+            "pss": 17.4,
+            "rss": 30.5,
+            "vsize": 79.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 176.2,
+            "pss": 182.1,
+            "rss": 196.8,
+            "vsize": 445.6
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.3,
+            "pss": 17.6,
+            "rss": 30.7,
+            "vsize": 79.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 182.7,
+            "pss": 188.6,
+            "rss": 203.3,
+            "vsize": 448.6
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.3,
+            "pss": 16.4,
+            "rss": 29.3,
+            "vsize": 78.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 179.3,
+            "pss": 185.2,
+            "rss": 199.9,
+            "vsize": 447.5
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.8,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 184.6,
+            "pss": 190.6,
+            "rss": 205.2,
+            "vsize": 450.7
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.2,
+            "pss": 16.3,
+            "rss": 29.2,
+            "vsize": 78.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 180.8,
+            "pss": 186.7,
+            "rss": 201.4,
+            "vsize": 452.3
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.2,
+            "pss": 17.5,
+            "rss": 30.6,
+            "vsize": 79.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 185.5,
+            "pss": 191.5,
+            "rss": 206.1,
+            "vsize": 455.7
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.4,
+            "pss": 16.5,
+            "rss": 29.4,
+            "vsize": 78.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 182.4,
+            "pss": 188.4,
+            "rss": 203,
+            "vsize": 456.5
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.5,
+            "pss": 16.4,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 187.4,
+            "pss": 193.1,
+            "rss": 208.1,
+            "vsize": 464.3
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.7,
+            "pss": 16.5,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 184.3,
+            "pss": 190,
+            "rss": 205,
+            "vsize": 465.1
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.5,
+            "pss": 16.3,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 186.9,
+            "pss": 192.5,
+            "rss": 207.5,
+            "vsize": 467.3
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.4,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 185.8,
+            "pss": 191.5,
+            "rss": 206.5,
+            "vsize": 468.4
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.2,
+            "pss": 17,
+            "rss": 30.6,
+            "vsize": 79.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 186.2,
+            "pss": 191.8,
+            "rss": 206.9,
+            "vsize": 468.1
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14,
+            "pss": 16.6,
+            "rss": 30,
+            "vsize": 79.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 187.1,
+            "pss": 192.8,
+            "rss": 207.8,
+            "vsize": 471.2
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.4,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 189.6,
+            "pss": 195.2,
+            "rss": 210.2,
+            "vsize": 473.1
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.4,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 188.7,
+            "pss": 194.3,
+            "rss": 209.4,
+            "vsize": 476.1
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.4,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 191.9,
+            "pss": 197.6,
+            "rss": 212.6,
+            "vsize": 478.2
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.6,
+            "pss": 16.4,
+            "rss": 29.9,
+            "vsize": 78.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 190.5,
+            "pss": 196.1,
+            "rss": 211.2,
+            "vsize": 479.2
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.2,
+            "pss": 17,
+            "rss": 30.5,
+            "vsize": 79.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 195.6,
+            "pss": 201.2,
+            "rss": 216.2,
+            "vsize": 481.5
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 13.9,
+            "pss": 16.5,
+            "rss": 29.9,
+            "vsize": 79.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 192.4,
+            "pss": 198.1,
+            "rss": 213.1,
+            "vsize": 483.1
+          }
+        },
+        {
+          "app": {
+            "name": "Clock",
+            "uss": 14.2,
+            "pss": 17,
+            "rss": 30.6,
+            "vsize": 79.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 195.2,
+            "pss": 200.8,
+            "rss": 215.8,
+            "vsize": 485.3
+          }
+        }
+      ],
+      "mozPerfMemoryAverage": {
+        "app": {
+          "uss": "13.807",
+          "pss": "16.827",
+          "rss": "30.073",
+          "vsize": "79.097"
+        },
+        "system": {
+          "uss": "183.147",
+          "pss": "188.977",
+          "rss": "203.780",
+          "vsize": "456.107"
+        }
+      }
+    }
+  ]
+}
+,
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2014-07-22T19:58:47.687Z",
+    "end": "2014-07-22T20:12:22.195Z",
+    "duration": 814508,
+    "application": "email"
+  },
+  "failures": [],
+  "passes": [
+    {
+      "title": "startup time ",
+      "fullTitle": "startup test > email > startup time ",
+      "duration": 414323,
+      "mozPerfDurations": [
+        290,
+        285,
+        339,
+        400,
+        352,
+        387,
+        347,
+        312,
+        380,
+        326,
+        1034,
+        337,
+        337,
+        402,
+        349,
+        426,
+        398,
+        390,
+        416,
+        405,
+        1048,
+        362,
+        387,
+        388,
+        404,
+        354,
+        395,
+        341,
+        377,
+        300
+      ],
+      "mozPerfDurationsAverage": 408.93333333333334,
+      "mozPerfMemory": [
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.8,
+            "pss": 18.5,
+            "rss": 32.1,
+            "vsize": 80.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 319.9,
+            "pss": 325.5,
+            "rss": 340.7,
+            "vsize": 765.6
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.8,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 325.1,
+            "pss": 330.8,
+            "rss": 346,
+            "vsize": 768.5
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.7,
+            "rss": 32.4,
+            "vsize": 81.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 321.1,
+            "pss": 326.8,
+            "rss": 342,
+            "vsize": 769.2
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.7,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 321.3,
+            "pss": 326.9,
+            "rss": 342.1,
+            "vsize": 770.3
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.8,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 326.9,
+            "pss": 332.5,
+            "rss": 347.7,
+            "vsize": 773.1
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16.6,
+            "pss": 19.3,
+            "rss": 32.9,
+            "vsize": 81.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 323.4,
+            "pss": 329,
+            "rss": 344.2,
+            "vsize": 774.3
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.8,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 323.3,
+            "pss": 329,
+            "rss": 344.2,
+            "vsize": 775.2
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.7,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 327.6,
+            "pss": 333.2,
+            "rss": 348.4,
+            "vsize": 779.5
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16,
+            "pss": 18.8,
+            "rss": 32.6,
+            "vsize": 81.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 325.3,
+            "pss": 330.9,
+            "rss": 346.1,
+            "vsize": 778.3
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.6,
+            "rss": 32.2,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 325.9,
+            "pss": 331.6,
+            "rss": 346.8,
+            "vsize": 780.4
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.8,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 327.2,
+            "pss": 332.9,
+            "rss": 348.1,
+            "vsize": 781.9
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.4,
+            "rss": 32.2,
+            "vsize": 81.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 327.8,
+            "pss": 333.5,
+            "rss": 348.7,
+            "vsize": 784.4
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16.5,
+            "pss": 19.3,
+            "rss": 33,
+            "vsize": 81.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 327.7,
+            "pss": 333.3,
+            "rss": 348.5,
+            "vsize": 785.2
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.8,
+            "pss": 18.7,
+            "rss": 32.5,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 330.5,
+            "pss": 336.1,
+            "rss": 351.4,
+            "vsize": 786.9
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.7,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 333.6,
+            "pss": 339.3,
+            "rss": 354.5,
+            "vsize": 790.2
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16.1,
+            "pss": 18.8,
+            "rss": 32.4,
+            "vsize": 81.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 331.6,
+            "pss": 337.2,
+            "rss": 352.5,
+            "vsize": 793.4
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.5,
+            "pss": 18.2,
+            "rss": 31.8,
+            "vsize": 80.9
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 331.7,
+            "pss": 337.3,
+            "rss": 352.5,
+            "vsize": 794.5
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.7,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 335.5,
+            "pss": 341.2,
+            "rss": 356.4,
+            "vsize": 796.5
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16.2,
+            "pss": 18.9,
+            "rss": 32.5,
+            "vsize": 81.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 334.2,
+            "pss": 339.8,
+            "rss": 355,
+            "vsize": 797.5
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16,
+            "pss": 18.9,
+            "rss": 32.7,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 334.3,
+            "pss": 340,
+            "rss": 355.2,
+            "vsize": 798.4
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.8,
+            "pss": 18.7,
+            "rss": 32.5,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 335.8,
+            "pss": 341.5,
+            "rss": 356.7,
+            "vsize": 800.2
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16,
+            "pss": 18.4,
+            "rss": 32.2,
+            "vsize": 81.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 336.4,
+            "pss": 341.9,
+            "rss": 357.3,
+            "vsize": 803.4
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16.6,
+            "pss": 19.3,
+            "rss": 32.9,
+            "vsize": 81.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 336.8,
+            "pss": 342.4,
+            "rss": 357.7,
+            "vsize": 805.7
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.8,
+            "pss": 18.7,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 338.3,
+            "pss": 343.9,
+            "rss": 359.1,
+            "vsize": 806
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.6,
+            "pss": 18.1,
+            "rss": 31.9,
+            "vsize": 80.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 338.5,
+            "pss": 344.1,
+            "rss": 359.3,
+            "vsize": 808.7
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16.7,
+            "pss": 19.4,
+            "rss": 33,
+            "vsize": 81.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 338.7,
+            "pss": 344.3,
+            "rss": 359.5,
+            "vsize": 809.4
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16.1,
+            "pss": 18.9,
+            "rss": 32.7,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 340.3,
+            "pss": 345.9,
+            "rss": 361.1,
+            "vsize": 811
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16,
+            "pss": 18.9,
+            "rss": 32.7,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 345.6,
+            "pss": 351.2,
+            "rss": 366.4,
+            "vsize": 814.4
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 16.1,
+            "pss": 18.8,
+            "rss": 32.4,
+            "vsize": 81.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 342.5,
+            "pss": 348.1,
+            "rss": 363.4,
+            "vsize": 816.5
+          }
+        },
+        {
+          "app": {
+            "name": "E-Mail",
+            "uss": 15.9,
+            "pss": 18.7,
+            "rss": 32.6,
+            "vsize": 81.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 344.3,
+            "pss": 350,
+            "rss": 365.2,
+            "vsize": 817.7
+          }
+        }
+      ],
+      "mozPerfMemoryAverage": {
+        "app": {
+          "uss": "16.000",
+          "pss": "18.767",
+          "rss": "32.520",
+          "vsize": "81.160"
+        },
+        "system": {
+          "uss": "331.703",
+          "pss": "337.337",
+          "rss": "352.557",
+          "vsize": "791.210"
+        }
+      }
+    },
+    {
+      "title": "startup > moz-chrome-dom-loaded",
+      "fullTitle": "startup event test > email > startup > moz-chrome-dom-loaded",
+      "duration": 399389,
+      "mozPerfDurations": [
+        174.39843799999926,
+        166.981718,
+        180.6334370000004,
+        167.0595310000008,
+        167.16301999999996,
+        882.1405729999997,
+        162.27218700000049,
+        172.07656300000053,
+        178.74161399999866,
+        222.88676999999916,
+        215.62958300000082,
+        845.2895309999994,
+        188.03348899999946,
+        151.95843799999966,
+        162.42536499999915,
+        192.6628639999999,
+        193.02390599999944,
+        162.91531300000042,
+        166.77328099999977,
+        192.09812499999953,
+        177.40088600000036,
+        172.2830210000002,
+        3513.467031,
+        177.03880200000094,
+        173.6281259999996,
+        161.13802099999975,
+        200.23500000000058,
+        188.44713500000034,
+        173.2772389999991,
+        239.93755200000032
+      ],
+      "mozPerfDurationsAverage": 337.4005519666667
+    },
+    {
+      "title": "startup > moz-app-visually-complete",
+      "fullTitle": "startup event test > email > startup > moz-app-visually-complete",
+      "duration": 399389,
+      "mozPerfDurations": [
+        175.54432300000008,
+        167.84520799999973,
+        181.6092180000005,
+        168.1025520000003,
+        168.35031299999991,
+        883.1952609999998,
+        163.36067700000058,
+        173.0862500000003,
+        179.85968700000012,
+        223.9748959999988,
+        216.60140599999977,
+        846.7238539999989,
+        189.04135399999996,
+        153.06921899999907,
+        163.26520899999923,
+        193.8948960000007,
+        194.0201559999996,
+        163.91989599999943,
+        168.235729,
+        193.4033329999993,
+        178.88822999999957,
+        174.98515599999973,
+        3513.77052,
+        178.0660939999998,
+        174.9623959999999,
+        162.12552099999994,
+        201.15703200000098,
+        189.50031200000012,
+        174.5539579999986,
+        241.0514579999999
+      ],
+      "mozPerfDurationsAverage": 338.53880379999987
+    },
+    {
+      "title": "startup > moz-content-interactive",
+      "fullTitle": "startup event test > email > startup > moz-content-interactive",
+      "duration": 399389,
+      "mozPerfDurations": [
+        1715.193282000001,
+        1220.1916140000003,
+        4209.480519999999,
+        1254.2509370000007,
+        2005.9721869999994,
+        2005.5322400000014,
+        1270.3451560000003,
+        4286.966874,
+        1312.5612499999988,
+        1415.2907289999994,
+        1947.9910929999996,
+        1945.1763019999999,
+        1233.4112499999983,
+        1200.2108850000004,
+        1242.8628129999997,
+        2052.336145,
+        1298.8738539999995,
+        4236.177603,
+        1262.3649989999994,
+        2018.5356239999992,
+        1956.0379170000006,
+        1306.8188019999989,
+        4533.552916000001,
+        1259.7401570000002,
+        1406.2279170000002,
+        1971.6450529999984,
+        1303.328802,
+        4483.265571,
+        1226.4316659999986,
+        1489.7405210000006
+      ],
+      "mozPerfDurationsAverage": 2002.3504892999997
+    },
+    {
+      "title": "startup > moz-chrome-interactive",
+      "fullTitle": "startup event test > email > startup > moz-chrome-interactive",
+      "duration": 399389,
+      "mozPerfDurations": [
+        1715.861511,
+        1220.655572999999,
+        4209.881458,
+        1255.1878120000001,
+        2006.3863540000002,
+        2006.048229000001,
+        1270.9971350000005,
+        4287.337031000001,
+        1312.9705729999987,
+        1416.0016669999995,
+        1948.4597390000008,
+        1945.645469000001,
+        1234.209582999999,
+        1200.5719260000005,
+        1243.3619280000003,
+        2052.807656,
+        1300.899218999999,
+        4236.5815090000015,
+        1262.9401040000012,
+        2019.0096349999994,
+        1956.431146,
+        1307.6273960000008,
+        4533.985103000001,
+        1261.0882819999988,
+        1406.9493230000007,
+        1972.0972919999986,
+        1303.7982809999994,
+        4483.707446,
+        1226.8565099999996,
+        1490.2233850000002
+      ],
+      "mozPerfDurationsAverage": 2002.9526091666667
+    },
+    {
+      "title": "startup > moz-app-loaded",
+      "fullTitle": "startup event test > email > startup > moz-app-loaded",
+      "duration": 399389,
+      "mozPerfDurations": [
+        2165.886562999999,
+        1784.7238009999992,
+        4714.488905,
+        2688.208593000001,
+        2693.691979000001,
+        2580.001771,
+        1903.6115100000006,
+        4995.363487999999,
+        2643.901873999999,
+        2498.738592999999,
+        2356.8589060000004,
+        2601.4846879999986,
+        1915.0312489999988,
+        1710.279947000001,
+        2727.0354160000006,
+        2730.864686,
+        1765.0718230000002,
+        4941.324322,
+        2623.497030999999,
+        2660.6057279999995,
+        2634.1258850000004,
+        1917.528542000001,
+        5128.144894999999,
+        1793.7737500000003,
+        2603.193385999999,
+        2642.1108849999982,
+        1805.6640110000008,
+        5124.816665,
+        2688.6575520000006,
+        2306.0360410000003
+      ],
+      "mozPerfDurationsAverage": 2778.1574161666667
+    }
+  ]
+}
+,
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 2,
+    "start": "2014-07-22T20:50:27.438Z",
+    "end": "2014-07-22T21:16:03.392Z",
+    "duration": 1535954,
+    "application": "settings"
+  },
+  "failures": [
+    {
+      "title": "rendering WiFi list >",
+      "fullTitle": "settings > rendering WiFi list >",
+      "duration": 62031,
+      "stack": "{ name: 'Error',\n  stack: 'Error: Polling socket recv() timeout!\\n    at TcpSync._readResponse (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/drivers/tcp-sync.js:87:30)\\n    at TcpSync.send (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/drivers/tcp-sync.js:100:24)\\n    at Object.send (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:457:36)\\n    at Object.Client._sendCommand (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:503:19)\\n    at Object._executeScript (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:1468:19)\\n    at Object.executeAsyncScript (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:1249:19)\\n    at Object.PerfTestApp.waitForPerfEvents (/srv/moz/gaia/tests/performance/app.js:95:17)\\n    at Object.PerformanceHelper.waitForPerfEvent (/srv/moz/gaia/tests/performance/performance_helper.js:190:16)\\n    at /srv/moz/gaia/apps/settings/test/performance/rendering_wifi_list_test.js:54:25\\n    at Object.PerformanceHelper.task (/srv/moz/gaia/tests/performance/performance_helper.js:178:7)\\n    at /srv/moz/gaia/tests/performance/performance_helper.js:164:16\\n    at Object.Client.waitForSync (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:668:18)\\n    at Object.Client.waitFor (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:650:60)\\n    at Object.Helper.delay (/srv/moz/gaia/tests/js-marionette/helper.js:28:12)\\n    at Object.PerformanceHelper.delay (/srv/moz/gaia/tests/performance/performance_helper.js:186:24)\\n    at trigger (/srv/moz/gaia/tests/performance/performance_helper.js:163:14)\\n    at Object.PerformanceHelper.repeatWithDelay (/srv/moz/gaia/tests/performance/performance_helper.js:168:7)\\n    at Context.<anonymous> (/srv/moz/gaia/apps/settings/test/performance/rendering_wifi_list_test.js:43:23)\\n    at callFn (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:223:21)\\n    at Test.Runnable.run (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:216:7)\\n    at Runner.runTest (/srv/moz/gaia/node_modules/mocha/lib/runner.js:373:10)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runner.js:451:12\\n    at next (/srv/moz/gaia/node_modules/mocha/lib/runner.js:298:14)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runner.js:308:7\\n    at next (/srv/moz/gaia/node_modules/mocha/lib/runner.js:246:23)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runner.js:270:7\\n    at done (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:185:5)\\n    at callFn (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:228:7)\\n    at Hook.Runnable.run (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:216:7)\\n    at next (/srv/moz/gaia/node_modules/mocha/lib/runner.js:258:10)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runner.js:270:7\\n    at done (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:185:5)\\n    at /srv/moz/gaia/node_modules/mocha/lib/runnable.js:199:9\\n    at Object.executeHook (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:369:18)\\n    at process._tickCallback (node.js:415:13)',\n  type: 'Error',\n  constructorName: 'Error',\n  expected: null,\n  actual: null }",
+      "index": 0,
+      "msg": "",
+      "actual": null,
+      "expected": null
+    },
+    {
+      "title": "\"after each\" hook",
+      "fullTitle": "settings > \"after each\" hook",
+      "duration": 2,
+      "stack": "{ name: 'ScriptTimeout',\n  stack: 'ScriptTimeout: (28) timed out\\nRemote Stack:\\n<none>\\n    at Error.MarionetteError (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/error.js:67:13)\\n    at Object.Client._handleCallback (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:476:19)\\n    at /srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:510:21\\n    at TcpSync.send (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/drivers/tcp-sync.js:100:10)\\n    at Object.send (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:457:36)\\n    at Object.Client._sendCommand (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:503:19)\\n    at Object.closeDriver (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:751:14)\\n    at Object.executeHook (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:359:20)\\n    at Object.Client.runHook (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:377:7)\\n    at Object.destroySession [as deleteSession] (/srv/moz/gaia/node_modules/marionette-client/lib/marionette/client.js:761:12)\\n    at Context.<anonymous> (/srv/moz/gaia/node_modules/marionette-js-runner/lib/runtime/hostmanager.js:102:14)\\n    at Hook.Runnable.run (/srv/moz/gaia/node_modules/mocha/lib/runnable.js:196:15)\\n    at next (/srv/moz/gaia/node_modules/mocha/lib/runner.js:258:10)\\n    at Object._onImmediate (/srv/moz/gaia/node_modules/mocha/lib/runner.js:275:5)\\n    at processImmediate [as _immediateCallback] (timers.js:330:15)',\n  type: 'ScriptTimeout',\n  constructorName: 'Error',\n  expected: null,\n  actual: null }",
+      "index": 0,
+      "msg": "",
+      "actual": null,
+      "expected": null
+    }
+  ],
+  "passes": [
+    {
+      "title": "startup time ",
+      "fullTitle": "startup test > settings > startup time ",
+      "duration": 516204,
+      "mozPerfDurations": [
+        923,
+        6259,
+        677,
+        753,
+        6288,
+        668,
+        664,
+        704,
+        1888,
+        6340,
+        724,
+        647,
+        714,
+        941,
+        996,
+        942,
+        2097,
+        6471,
+        645,
+        2162,
+        6229,
+        937,
+        670,
+        683,
+        660,
+        639,
+        743,
+        985,
+        648,
+        670
+      ],
+      "mozPerfDurationsAverage": 1812.2333333333333,
+      "mozPerfMemory": [
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.4,
+            "pss": 17.1,
+            "rss": 31.1,
+            "vsize": 88.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 491.9,
+            "pss": 497.5,
+            "rss": 512.8,
+            "vsize": 1156.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14,
+            "pss": 16.5,
+            "rss": 30.5,
+            "vsize": 83.7
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 492.4,
+            "pss": 497.8,
+            "rss": 513.2,
+            "vsize": 1155.2
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.2,
+            "pss": 17.1,
+            "rss": 31,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 492.8,
+            "pss": 498.5,
+            "rss": 513.8,
+            "vsize": 1155.5
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.1,
+            "pss": 16.9,
+            "rss": 30.7,
+            "vsize": 83.5
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 494,
+            "pss": 499.6,
+            "rss": 514.8,
+            "vsize": 1157.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14,
+            "pss": 16.5,
+            "rss": 30.5,
+            "vsize": 83.7
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 495.4,
+            "pss": 500.9,
+            "rss": 516.2,
+            "vsize": 1161.5
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.2,
+            "pss": 17.1,
+            "rss": 31,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 495.6,
+            "pss": 501.3,
+            "rss": 516.6,
+            "vsize": 1161.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.8,
+            "pss": 16.6,
+            "rss": 30.5,
+            "vsize": 83.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 497.1,
+            "pss": 502.8,
+            "rss": 518,
+            "vsize": 1164.8
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.1,
+            "pss": 17,
+            "rss": 30.9,
+            "vsize": 88.7
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 498.1,
+            "pss": 503.7,
+            "rss": 519,
+            "vsize": 1171.2
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.1,
+            "pss": 17,
+            "rss": 30.9,
+            "vsize": 83.5
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 499,
+            "pss": 504.7,
+            "rss": 519.9,
+            "vsize": 1168.1
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.2,
+            "pss": 16.7,
+            "rss": 30.8,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 499.6,
+            "pss": 505,
+            "rss": 520.3,
+            "vsize": 1170.5
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.1,
+            "pss": 17,
+            "rss": 30.9,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 499.5,
+            "pss": 505.1,
+            "rss": 520.4,
+            "vsize": 1170.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.7,
+            "pss": 16.5,
+            "rss": 30.4,
+            "vsize": 88.2
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 500.8,
+            "pss": 506.5,
+            "rss": 521.8,
+            "vsize": 1177.4
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.8,
+            "pss": 16.7,
+            "rss": 30.6,
+            "vsize": 83.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 501.8,
+            "pss": 507.5,
+            "rss": 522.7,
+            "vsize": 1179.4
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.4,
+            "pss": 17.2,
+            "rss": 31.2,
+            "vsize": 84.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 503.2,
+            "pss": 508.8,
+            "rss": 524.1,
+            "vsize": 1182.5
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.9,
+            "pss": 16.4,
+            "rss": 30.4,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 503.3,
+            "pss": 508.8,
+            "rss": 524.1,
+            "vsize": 1181.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.5,
+            "pss": 17.2,
+            "rss": 31.3,
+            "vsize": 84.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 503.9,
+            "pss": 509.6,
+            "rss": 524.8,
+            "vsize": 1182.4
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.9,
+            "pss": 16.7,
+            "rss": 30.5,
+            "vsize": 83.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 504.8,
+            "pss": 510.4,
+            "rss": 525.5,
+            "vsize": 1183.1
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14,
+            "pss": 16.6,
+            "rss": 30.6,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 505.9,
+            "pss": 511.3,
+            "rss": 526.6,
+            "vsize": 1185.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.3,
+            "pss": 17.2,
+            "rss": 31.1,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 505.4,
+            "pss": 511,
+            "rss": 526.3,
+            "vsize": 1184.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.9,
+            "pss": 16.6,
+            "rss": 30.4,
+            "vsize": 83.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 506.9,
+            "pss": 512.5,
+            "rss": 527.6,
+            "vsize": 1186.9
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.6,
+            "pss": 16.1,
+            "rss": 30.1,
+            "vsize": 82.7
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 508,
+            "pss": 513.4,
+            "rss": 528.7,
+            "vsize": 1190.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14,
+            "pss": 16.9,
+            "rss": 30.8,
+            "vsize": 84.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 510.1,
+            "pss": 515.8,
+            "rss": 531.1,
+            "vsize": 1190.5
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.8,
+            "pss": 16.7,
+            "rss": 30.6,
+            "vsize": 83.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 509.8,
+            "pss": 515.4,
+            "rss": 530.7,
+            "vsize": 1198.1
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.2,
+            "pss": 17,
+            "rss": 30.9,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 512.5,
+            "pss": 518.2,
+            "rss": 533.4,
+            "vsize": 1194.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14,
+            "pss": 16.9,
+            "rss": 30.8,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 511.5,
+            "pss": 517.2,
+            "rss": 532.4,
+            "vsize": 1197.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.2,
+            "pss": 17,
+            "rss": 30.9,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 513.4,
+            "pss": 519.1,
+            "rss": 534.3,
+            "vsize": 1199.8
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.9,
+            "pss": 16.6,
+            "rss": 30.5,
+            "vsize": 88.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 514,
+            "pss": 519.6,
+            "rss": 534.8,
+            "vsize": 1206.3
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 13.9,
+            "pss": 16.4,
+            "rss": 30.4,
+            "vsize": 83.7
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 514.2,
+            "pss": 519.7,
+            "rss": 535,
+            "vsize": 1209.1
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.3,
+            "pss": 17.2,
+            "rss": 31.1,
+            "vsize": 83.6
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 514.9,
+            "pss": 520.6,
+            "rss": 535.8,
+            "vsize": 1202.7
+          }
+        },
+        {
+          "app": {
+            "name": "Settings",
+            "uss": 14.3,
+            "pss": 17.1,
+            "rss": 31,
+            "vsize": 88.8
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 515.8,
+            "pss": 521.5,
+            "rss": 536.8,
+            "vsize": 1212.1
+          }
+        }
+      ],
+      "mozPerfMemoryAverage": {
+        "app": {
+          "uss": "14.060",
+          "pss": "16.817",
+          "rss": "30.747",
+          "vsize": "84.407"
+        },
+        "system": {
+          "uss": "503.853",
+          "pss": "509.460",
+          "rss": "524.717",
+          "vsize": "1181.303"
+        }
+      }
+    },
+    {
+      "title": "startup > moz-chrome-dom-loaded",
+      "fullTitle": "startup event test > settings > startup > moz-chrome-dom-loaded",
+      "duration": 511705,
+      "mozPerfDurations": [
+        796.6204160000016,
+        913.0969269999987,
+        773.4917709999991,
+        813.4344270000001,
+        836.389271,
+        841.299011000001,
+        838.5684889999993,
+        794.553332999998,
+        854.3417710000012,
+        820.1341150000007,
+        819.5856249999997,
+        861.9341670000013,
+        859.2276560000009,
+        832.730781000002,
+        828.0200519999999,
+        827.3065609999994,
+        837.7783850000014,
+        755.7944270000007,
+        789.2570830000004,
+        830.0863539999991,
+        805.4775520000003,
+        808.3615099999988,
+        849.6283340000009,
+        796.6110939999999,
+        832.9641659999998,
+        833.4279170000009,
+        928.9950520000002,
+        1010.0780720000021,
+        836.6081250000007,
+        780.2944270000007
+      ],
+      "mozPerfDurationsAverage": 833.536562366667
+    },
+    {
+      "title": "startup > moz-chrome-interactive",
+      "fullTitle": "startup event test > settings > startup > moz-chrome-interactive",
+      "duration": 511705,
+      "mozPerfDurations": [
+        797.0700000000015,
+        915.308853999999,
+        773.8410419999982,
+        813.8700520000002,
+        837.1028640000004,
+        844.432605,
+        839.1761979999992,
+        794.9647909999985,
+        854.7295830000003,
+        820.600781000001,
+        820.0051560000011,
+        862.3656769999998,
+        859.5811460000004,
+        833.1227080000026,
+        828.4081769999993,
+        827.8247379999993,
+        838.1289580000011,
+        756.1928129999997,
+        789.6239060000007,
+        830.6881769999982,
+        805.9241140000013,
+        809.0279689999988,
+        850.0453650000018,
+        797.0033340000009,
+        833.3143739999996,
+        833.8430210000006,
+        929.6489059999985,
+        1010.4683330000007,
+        836.9981770000013,
+        780.8875520000001
+      ],
+      "mozPerfDurationsAverage": 834.1399790333334
+    },
+    {
+      "title": "startup > startup-path-done",
+      "fullTitle": "startup event test > settings > startup > startup-path-done",
+      "duration": 511705,
+      "mozPerfDurations": [
+        1865.1909890000006,
+        6785.262080999999,
+        1682.217655999997,
+        1903.0544790000004,
+        1735.8458329999994,
+        1398.348438000001,
+        1422.9586459999991,
+        1784.8462490000002,
+        3121.973749999999,
+        6761.400987999999,
+        1893.0705200000011,
+        1779.8391149999989,
+        3268.5674470000013,
+        1670.3383329999997,
+        1864.204322999998,
+        1877.6256749999993,
+        7082.775206,
+        1639.2904169999965,
+        1819.953646,
+        1873.4163019999996,
+        1755.3142180000013,
+        2976.4497389999997,
+        1566.4559900000022,
+        1804.2093750000004,
+        2009.2398429999994,
+        1813.4017710000007,
+        3131.5272910000003,
+        6635.490780000002,
+        1801.0296350000026,
+        1751.8044260000006
+      ],
+      "mozPerfDurationsAverage": 2615.8367720333335
+    },
+    {
+      "title": "startup > moz-app-visually-complete",
+      "fullTitle": "startup event test > settings > startup > moz-app-visually-complete",
+      "duration": 511705,
+      "mozPerfDurations": [
+        2464.9619790000015,
+        7908.35031,
+        3573.390779999998,
+        2609.780208,
+        2334.1851560000014,
+        2110.5571880000007,
+        2114.9229680000008,
+        3561.9104149999985,
+        4133.322864,
+        7566.590257999998,
+        3692.477029999998,
+        3645.3852610000013,
+        4105.840573000001,
+        3780.381822000003,
+        2592.96026,
+        3458.709374,
+        8243.326975999998,
+        2495.5822399999997,
+        3821.8989060000004,
+        3718.4150519999985,
+        3559.6843230000013,
+        3916.908384999999,
+        2537.817449000002,
+        2674.18901,
+        3694.5057269999998,
+        3872.3708850000003,
+        3947.6997389999997,
+        7897.716977000002,
+        2725.066353000002,
+        3593.1086970000015
+      ],
+      "mozPerfDurationsAverage": 3878.400572166667
+    },
+    {
+      "title": "startup > moz-content-interactive",
+      "fullTitle": "startup event test > settings > startup > moz-content-interactive",
+      "duration": 511705,
+      "mozPerfDurations": [
+        2465.3658330000017,
+        7908.682498,
+        3573.9490609999993,
+        2610.068853999999,
+        2334.5835939999997,
+        2111.2556780000014,
+        2115.427708000001,
+        3562.625884000001,
+        4134.009114,
+        7566.9948410000015,
+        3692.8932800000002,
+        3645.6726040000012,
+        4107.497500000001,
+        3780.829270000002,
+        2593.3578119999984,
+        3459.2767170000006,
+        8243.74932,
+        2495.9814589999987,
+        3822.2558850000005,
+        3718.8576559999983,
+        3560.0519790000017,
+        3917.2941139999984,
+        2538.2426049999995,
+        2674.8667189999996,
+        3694.8946859999996,
+        3872.766458000002,
+        3948.071770999999,
+        7898.064529000001,
+        2725.652551000003,
+        3593.9834880000017
+      ],
+      "mozPerfDurationsAverage": 3878.9074489333343
+    },
+    {
+      "title": "startup > moz-app-loaded",
+      "fullTitle": "startup event test > settings > startup > moz-app-loaded",
+      "duration": 511705,
+      "mozPerfDurations": [
+        5061.325207000002,
+        10049.614735999998,
+        4634.640936,
+        5204.884634,
+        4661.479998999999,
+        4654.304218000001,
+        4611.299634000001,
+        5155.6057789999995,
+        5244.33203,
+        9916.984788000003,
+        5210.4885399999985,
+        5148.951979000001,
+        6563.7487470000015,
+        4751.982187000001,
+        5102.548852,
+        5017.87932,
+        10345.703694000002,
+        4993.410780999999,
+        4814.450362000001,
+        5139.046354,
+        5144.508176000001,
+        6169.513956999999,
+        4809.343123999999,
+        4502.545103999999,
+        5244.867392999999,
+        5230.504999000001,
+        5881.215571000001,
+        9707.133747000002,
+        4646.209685000002,
+        4650.989477000001
+      ],
+      "mozPerfDurationsAverage": 5742.317133666667
+    },
+    {
+      "title": "Overfill Settings Scroll > overfills",
+      "fullTitle": "settings > Overfill Settings Scroll > overfills",
+      "duration": 444424,
+      "mozPerfDurations": [
+        200,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320,
+        320
+      ],
+      "mozPerfDurationsAverage": 316
+    }
+  ]
+}
+,
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2014-07-22T21:16:03.672Z",
+    "end": "2014-07-22T21:31:05.684Z",
+    "duration": 902012,
+    "application": "sms"
+  },
+  "failures": [],
+  "passes": [
+    {
+      "title": "startup time ",
+      "fullTitle": "startup test > sms > startup time ",
+      "duration": 443553,
+      "mozPerfDurations": [
+        885,
+        836,
+        852,
+        872,
+        857,
+        853,
+        830,
+        878,
+        844,
+        856,
+        866,
+        906,
+        887,
+        871,
+        852,
+        891,
+        909,
+        884,
+        885,
+        836,
+        964,
+        848,
+        923,
+        861,
+        843,
+        846,
+        842,
+        880,
+        854,
+        864
+      ],
+      "mozPerfDurationsAverage": 869.1666666666666,
+      "mozPerfMemory": [
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 562.9,
+            "pss": 568.4,
+            "rss": 583.5,
+            "vsize": 1311.7
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 565.1,
+            "pss": 570.6,
+            "rss": 585.7,
+            "vsize": 1312.7
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 73.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 564.7,
+            "pss": 570.2,
+            "rss": 585.3,
+            "vsize": 1312.3
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.9,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 566.9,
+            "pss": 572.4,
+            "rss": 587.5,
+            "vsize": 1315.5
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15,
+            "rss": 27.3,
+            "vsize": 72.1
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 565.6,
+            "pss": 571.1,
+            "rss": 586.3,
+            "vsize": 1317.6
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 72.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 568.1,
+            "pss": 573.7,
+            "rss": 588.8,
+            "vsize": 1318.9
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 567.6,
+            "pss": 573.1,
+            "rss": 588.2,
+            "vsize": 1319.5
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 569.7,
+            "pss": 575.3,
+            "rss": 590.4,
+            "vsize": 1321.4
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15,
+            "rss": 27.3,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 570.5,
+            "pss": 576,
+            "rss": 591.2,
+            "vsize": 1324.5
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15,
+            "rss": 27.3,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 570.4,
+            "pss": 575.9,
+            "rss": 591.1,
+            "vsize": 1328.6
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 570.3,
+            "pss": 575.8,
+            "rss": 591,
+            "vsize": 1328.4
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 571.1,
+            "pss": 576.6,
+            "rss": 591.8,
+            "vsize": 1329.7
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.1,
+            "rss": 27.4,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 572,
+            "pss": 577.6,
+            "rss": 592.7,
+            "vsize": 1330.6
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 574.1,
+            "pss": 579.6,
+            "rss": 594.7,
+            "vsize": 1332.5
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 575.1,
+            "pss": 580.6,
+            "rss": 595.7,
+            "vsize": 1334.8
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15,
+            "rss": 27.2,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 575.6,
+            "pss": 581.2,
+            "rss": 596.3,
+            "vsize": 1336.7
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.9,
+            "pss": 15.3,
+            "rss": 27.5,
+            "vsize": 73.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 576.7,
+            "pss": 582.2,
+            "rss": 597.3,
+            "vsize": 1338
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 577.9,
+            "pss": 583.5,
+            "rss": 598.6,
+            "vsize": 1341.9
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.9,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 576.6,
+            "pss": 582.1,
+            "rss": 597.3,
+            "vsize": 1342.6
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 579.1,
+            "pss": 584.7,
+            "rss": 599.8,
+            "vsize": 1344.9
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.4,
+            "pss": 14.7,
+            "rss": 27,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 577.4,
+            "pss": 583,
+            "rss": 598.1,
+            "vsize": 1346.7
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 580.6,
+            "pss": 586.1,
+            "rss": 601.3,
+            "vsize": 1347.5
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.4,
+            "pss": 14.7,
+            "rss": 27,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 579,
+            "pss": 584.5,
+            "rss": 599.6,
+            "vsize": 1348.5
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 580.3,
+            "pss": 585.8,
+            "rss": 600.9,
+            "vsize": 1350.7
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.4,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 582.7,
+            "pss": 588.2,
+            "rss": 603.4,
+            "vsize": 1353.7
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 73.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 581.8,
+            "pss": 587.3,
+            "rss": 602.5,
+            "vsize": 1357.8
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.6,
+            "pss": 15,
+            "rss": 27.2,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 582.8,
+            "pss": 588.4,
+            "rss": 603.5,
+            "vsize": 1357.8
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.7,
+            "pss": 15.1,
+            "rss": 27.3,
+            "vsize": 73.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 585.2,
+            "pss": 590.7,
+            "rss": 605.8,
+            "vsize": 1358.8
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.3,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 583.2,
+            "pss": 588.7,
+            "rss": 603.8,
+            "vsize": 1359.5
+          }
+        },
+        {
+          "app": {
+            "name": "Messages",
+            "uss": 12.8,
+            "pss": 15.2,
+            "rss": 27.3,
+            "vsize": 72.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 586.3,
+            "pss": 591.8,
+            "rss": 606.9,
+            "vsize": 1361.8
+          }
+        }
+      ],
+      "mozPerfMemoryAverage": {
+        "app": {
+          "uss": "12.733",
+          "pss": "15.100",
+          "rss": "27.313",
+          "vsize": "72.740"
+        },
+        "system": {
+          "uss": "574.643",
+          "pss": "580.170",
+          "rss": "595.300",
+          "vsize": "1336.187"
+        }
+      }
+    },
+    {
+      "title": "startup > moz-chrome-dom-loaded",
+      "fullTitle": "startup event test > sms > startup > moz-chrome-dom-loaded",
+      "duration": 457580,
+      "mozPerfDurations": [
+        783.7309380000006,
+        739.2384889999994,
+        772.0190109999985,
+        725.4395829999994,
+        725.4934380000013,
+        705.5120829999996,
+        740.7084379999997,
+        791.0414069999988,
+        710.6957289999991,
+        751.2261980000003,
+        733.6451039999993,
+        774.0845320000008,
+        758.3560929999985,
+        718.558176999999,
+        814.1794270000009,
+        785.5786449999996,
+        722.6623949999994,
+        704.3801559999993,
+        771.8223960000014,
+        730.5350519999974,
+        765.1939590000002,
+        718.4319799999994,
+        739.0708859999995,
+        749.286458999999,
+        790.5578640000003,
+        786.6594269999987,
+        743.5135929999997,
+        792.5309890000008,
+        777.6621360000008,
+        713.7799480000012
+      ],
+      "mozPerfDurationsAverage": 751.1864843999998
+    },
+    {
+      "title": "startup > will-render-threads",
+      "fullTitle": "startup event test > sms > startup > will-render-threads",
+      "duration": 457580,
+      "mozPerfDurations": [
+        784.2747920000002,
+        739.7705210000004,
+        772.6963020000003,
+        727.1415619999989,
+        726.1375520000001,
+        705.9778119999974,
+        744.4991669999999,
+        791.4680209999988,
+        711.2369269999999,
+        751.8904170000005,
+        734.1162499999991,
+        774.6329690000002,
+        758.7645829999983,
+        719.4227609999998,
+        814.488542000001,
+        786.3621870000006,
+        723.2755199999992,
+        704.8008849999987,
+        772.2344790000006,
+        730.9527599999983,
+        765.6181779999988,
+        718.9244279999984,
+        739.5368229999985,
+        749.8762499999993,
+        790.9765100000004,
+        788.1234379999987,
+        744.1007289999998,
+        793.0136460000012,
+        778.1817709999996,
+        714.2299480000001
+      ],
+      "mozPerfDurationsAverage": 751.8908576666662
+    },
+    {
+      "title": "startup > moz-chrome-interactive",
+      "fullTitle": "startup event test > sms > startup > moz-chrome-interactive",
+      "duration": 457580,
+      "mozPerfDurations": [
+        784.6519270000008,
+        746.7794269999995,
+        773.1748439999992,
+        727.6064580000002,
+        726.8727610000005,
+        706.351197,
+        745.6111459999993,
+        791.9803649999994,
+        711.7304170000007,
+        752.2256770000004,
+        734.4903130000002,
+        775.0221359999996,
+        759.1400519999988,
+        720.0421879999994,
+        814.7320320000017,
+        787.0370820000007,
+        723.8343739999982,
+        705.1804680000005,
+        772.5631770000018,
+        731.5210929999994,
+        765.9716150000004,
+        719.2852089999997,
+        739.8906769999994,
+        750.418228999999,
+        791.2496869999995,
+        788.4863019999993,
+        744.4956239999992,
+        793.3038540000016,
+        778.5781769999994,
+        714.5992189999997
+      ],
+      "mozPerfDurationsAverage": 752.5608575666665
+    },
+    {
+      "title": "startup > objects-init-finished",
+      "fullTitle": "startup event test > sms > startup > objects-init-finished",
+      "duration": 457580,
+      "mozPerfDurations": [
+        784.9442189999991,
+        747.0869270000003,
+        773.599530999998,
+        727.9555720000008,
+        727.7103650000008,
+        706.6311969999988,
+        746.1755209999992,
+        792.4502089999987,
+        712.2209890000013,
+        752.5426040000002,
+        734.7660420000011,
+        775.3012500000004,
+        759.4716659999995,
+        720.5581779999993,
+        814.9611460000015,
+        787.4932289999997,
+        724.2921869999991,
+        705.502031,
+        772.8698440000007,
+        731.9755199999981,
+        766.3100529999992,
+        719.5691669999978,
+        740.169688,
+        750.779219,
+        791.4930719999993,
+        788.7914059999985,
+        744.7832290000006,
+        793.5497909999995,
+        778.9002610000007,
+        714.8798960000004
+      ],
+      "mozPerfDurationsAverage": 752.9244669666664
+    },
+    {
+      "title": "startup > moz-app-visually-complete",
+      "fullTitle": "startup event test > sms > startup > moz-app-visually-complete",
+      "duration": 457580,
+      "mozPerfDurations": [
+        964.6651039999997,
+        954.8859370000009,
+        934.253385,
+        869.8836460000002,
+        880.2013540000007,
+        930.5761459999994,
+        922.3206769999997,
+        971.7760419999995,
+        874.3151560000006,
+        933.1005210000003,
+        943.6262499999993,
+        1048.2582810000004,
+        956.9186969999973,
+        865.5341669999998,
+        1088.997292,
+        962.2265099999986,
+        883.7508849999995,
+        891.4507289999983,
+        921.0526560000017,
+        918.2036449999996,
+        957.0319279999985,
+        907.0110420000001,
+        948.2390630000009,
+        933.3353119999992,
+        1010.9031769999983,
+        965.6391669999994,
+        945.7752079999991,
+        951.9134370000011,
+        954.6956250000021,
+        891.8452080000006
+      ],
+      "mozPerfDurationsAverage": 939.4128748999996
+    },
+    {
+      "title": "startup > moz-content-interactive",
+      "fullTitle": "startup event test > sms > startup > moz-content-interactive",
+      "duration": 457580,
+      "mozPerfDurations": [
+        965.0815110000003,
+        955.3493230000004,
+        936.8737499999988,
+        870.2111460000015,
+        880.5915110000005,
+        930.9740619999975,
+        923.056822999999,
+        972.9146879999989,
+        874.6493229999996,
+        934.221719000001,
+        944.2016669999994,
+        1048.5678130000015,
+        957.3202599999986,
+        865.8658859999996,
+        1089.9589059999998,
+        963.2154159999991,
+        884.084374,
+        891.892656,
+        922.1842190000007,
+        918.6331759999994,
+        957.4333339999994,
+        907.4377089999998,
+        948.6960940000008,
+        933.6366660000003,
+        1012.0794259999984,
+        966.6755209999992,
+        946.184530999999,
+        953.008385000001,
+        955.1171880000002,
+        892.1705729999994
+      ],
+      "mozPerfDurationsAverage": 940.0762551999995
+    },
+    {
+      "title": "startup > moz-app-loaded",
+      "fullTitle": "startup event test > sms > startup > moz-app-loaded",
+      "duration": 457580,
+      "mozPerfDurations": [
+        965.4301560000004,
+        955.731667,
+        937.6192709999996,
+        870.4577079999999,
+        880.8621360000016,
+        931.3159369999976,
+        923.4391669999986,
+        973.7518759999984,
+        874.895469000001,
+        934.7966150000011,
+        945.8781769999987,
+        1048.8148959999999,
+        957.680363999998,
+        866.1105209999987,
+        1090.2905210000008,
+        963.6214579999996,
+        884.3372909999998,
+        892.2553119999993,
+        922.6910940000016,
+        919.0402599999979,
+        957.8113020000001,
+        907.7967189999999,
+        949.0910939999994,
+        933.8831769999979,
+        1012.532604,
+        967.1415629999992,
+        946.521197,
+        953.522500000001,
+        955.5034899999991,
+        892.5077600000004
+      ],
+      "mozPerfDurationsAverage": 940.5110433999996
+    }
+  ]
+}
+,
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2014-07-22T21:31:05.961Z",
+    "end": "2014-07-22T21:46:49.705Z",
+    "duration": 943744,
+    "application": "video"
+  },
+  "failures": [],
+  "passes": [
+    {
+      "title": "startup time ",
+      "fullTitle": "startup test > video > startup time ",
+      "duration": 468537,
+      "mozPerfDurations": [
+        547,
+        572,
+        528,
+        576,
+        489,
+        506,
+        526,
+        529,
+        545,
+        475,
+        525,
+        547,
+        542,
+        515,
+        542,
+        558,
+        557,
+        500,
+        485,
+        573,
+        537,
+        548,
+        535,
+        493,
+        471,
+        548,
+        584,
+        522,
+        584,
+        489
+      ],
+      "mozPerfDurationsAverage": 531.6,
+      "mozPerfMemory": [
+        {
+          "app": {
+            "name": "Video",
+            "uss": 13.1,
+            "pss": 17.9,
+            "rss": 32.9,
+            "vsize": 87.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 605.8,
+            "pss": 612.9,
+            "rss": 629.7,
+            "vsize": 1420.2
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 14.1,
+            "pss": 18.7,
+            "rss": 33.5,
+            "vsize": 89.9
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 605.2,
+            "pss": 612.3,
+            "rss": 629,
+            "vsize": 1424.9
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.7,
+            "pss": 14.1,
+            "rss": 25.9,
+            "vsize": 76.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 609.2,
+            "pss": 614.6,
+            "rss": 629.6,
+            "vsize": 1427.6
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.8,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 606.8,
+            "pss": 612.2,
+            "rss": 627.2,
+            "vsize": 1427.9
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.8,
+            "rss": 25.7,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 610.5,
+            "pss": 615.9,
+            "rss": 630.9,
+            "vsize": 1429.8
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.8,
+            "rss": 25.7,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 610.1,
+            "pss": 615.5,
+            "rss": 630.5,
+            "vsize": 1430.5
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.7,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 610,
+            "pss": 615.4,
+            "rss": 630.4,
+            "vsize": 1430.7
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.7,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 610.2,
+            "pss": 615.6,
+            "rss": 630.6,
+            "vsize": 1435.8
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.9,
+            "rss": 25.7,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 613,
+            "pss": 618.5,
+            "rss": 633.5,
+            "vsize": 1438.1
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.8,
+            "rss": 25.7,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 613.2,
+            "pss": 618.7,
+            "rss": 633.7,
+            "vsize": 1438.7
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.3,
+            "pss": 13.6,
+            "rss": 25.5,
+            "vsize": 75.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 612,
+            "pss": 617.5,
+            "rss": 632.5,
+            "vsize": 1439.1
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.6,
+            "pss": 13.9,
+            "rss": 25.8,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 613.4,
+            "pss": 618.8,
+            "rss": 633.8,
+            "vsize": 1439.9
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.8,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 614.5,
+            "pss": 619.9,
+            "rss": 634.9,
+            "vsize": 1445
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.9,
+            "rss": 25.7,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 616.6,
+            "pss": 622,
+            "rss": 637,
+            "vsize": 1448.1
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.7,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 617.4,
+            "pss": 622.8,
+            "rss": 637.8,
+            "vsize": 1451.2
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.7,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 617.6,
+            "pss": 623,
+            "rss": 638,
+            "vsize": 1451.2
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.8,
+            "rss": 25.7,
+            "vsize": 76.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 617.1,
+            "pss": 622.6,
+            "rss": 637.6,
+            "vsize": 1451
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.6,
+            "pss": 13.9,
+            "rss": 25.8,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 618.8,
+            "pss": 624.2,
+            "rss": 639.2,
+            "vsize": 1453.7
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.8,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 617,
+            "pss": 622.4,
+            "rss": 637.4,
+            "vsize": 1455.7
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.9,
+            "rss": 25.7,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 619,
+            "pss": 624.4,
+            "rss": 639.4,
+            "vsize": 1460
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.7,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 619.5,
+            "pss": 624.9,
+            "rss": 639.9,
+            "vsize": 1460
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.3,
+            "pss": 13.7,
+            "rss": 25.5,
+            "vsize": 75.3
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 621.1,
+            "pss": 626.5,
+            "rss": 641.6,
+            "vsize": 1462.3
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.8,
+            "rss": 25.7,
+            "vsize": 76.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 619.9,
+            "pss": 625.4,
+            "rss": 640.4,
+            "vsize": 1463.7
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.5,
+            "pss": 13.9,
+            "rss": 25.7,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 621.5,
+            "pss": 626.9,
+            "rss": 641.9,
+            "vsize": 1469.8
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.6,
+            "pss": 14,
+            "rss": 25.8,
+            "vsize": 76.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 622.5,
+            "pss": 628,
+            "rss": 643,
+            "vsize": 1471.6
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.7,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 623.2,
+            "pss": 628.6,
+            "rss": 643.6,
+            "vsize": 1472.8
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.6,
+            "pss": 13.9,
+            "rss": 25.8,
+            "vsize": 76.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 622.8,
+            "pss": 628.2,
+            "rss": 643.2,
+            "vsize": 1473.1
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.4,
+            "pss": 13.8,
+            "rss": 25.6,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 625.4,
+            "pss": 630.8,
+            "rss": 645.8,
+            "vsize": 1475.4
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.7,
+            "pss": 14,
+            "rss": 25.9,
+            "vsize": 76.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 624.8,
+            "pss": 630.2,
+            "rss": 645.2,
+            "vsize": 1478.1
+          }
+        },
+        {
+          "app": {
+            "name": "Video",
+            "uss": 11.6,
+            "pss": 13.9,
+            "rss": 25.8,
+            "vsize": 75.4
+          },
+          "system": {
+            "name": "b2g",
+            "uss": 626.7,
+            "pss": 632.2,
+            "rss": 647.1,
+            "vsize": 1483.2
+          }
+        }
+      ],
+      "mozPerfMemoryAverage": {
+        "app": {
+          "uss": "11.623",
+          "pss": "14.120",
+          "rss": "26.183",
+          "vsize": "76.477"
+        },
+        "system": {
+          "uss": "616.160",
+          "pss": "621.697",
+          "rss": "636.813",
+          "vsize": "1450.303"
+        }
+      }
+    },
+    {
+      "title": "startup > moz-chrome-dom-loaded",
+      "fullTitle": "startup event test > video > startup > moz-chrome-dom-loaded",
+      "duration": 474290,
+      "mozPerfDurations": [
+        390.0172389999989,
+        394.9602610000002,
+        372.65411400000266,
+        319.54953100000057,
+        353.8547920000001,
+        391.65838599999915,
+        431.05609300000106,
+        392.6361969999998,
+        387.6672920000001,
+        331.7034370000001,
+        421.08224000000155,
+        369.1199480000014,
+        413.0346869999994,
+        356.52348999999776,
+        379.1940100000011,
+        370.85229100000106,
+        328.76828099999693,
+        366.01781200000005,
+        372.7452599999997,
+        394.93057300000146,
+        360.267656,
+        377.32187499999964,
+        353.7182810000013,
+        372.9643750000014,
+        336.99104100000113,
+        406.29114599999957,
+        324.9241150000016,
+        399.8849480000008,
+        369.6218229999995,
+        372.6042180000004
+      ],
+      "mozPerfDurationsAverage": 373.75384706666694
+    },
+    {
+      "title": "startup > moz-chrome-interactive",
+      "fullTitle": "startup event test > video > startup > moz-chrome-interactive",
+      "duration": 474290,
+      "mozPerfDurations": [
+        390.3646869999993,
+        395.36625000000095,
+        373.10041600000113,
+        319.89192699999876,
+        354.41359399999783,
+        392.04312599999867,
+        431.58770800000093,
+        393.078019999999,
+        388.1025009999994,
+        332.06828099999984,
+        423.973073000001,
+        370.5501039999999,
+        413.50552099999913,
+        356.9866149999998,
+        379.55291599999873,
+        371.3308849999994,
+        329.1228639999972,
+        367.1332280000006,
+        373.1479169999984,
+        395.3261980000025,
+        360.73088499999903,
+        377.76656300000104,
+        354.1608860000015,
+        373.4194270000007,
+        337.36833300000035,
+        406.79895899999974,
+        325.3283330000013,
+        400.35088499999983,
+        370.09786499999973,
+        373.21869700000207
+      ],
+      "mozPerfDurationsAverage": 374.3295554666666
+    },
+    {
+      "title": "startup > moz-app-visually-complete",
+      "fullTitle": "startup event test > video > startup > moz-app-visually-complete",
+      "duration": 474290,
+      "mozPerfDurations": [
+        708.2190099999989,
+        675.7664059999988,
+        674.3077599999997,
+        645.3871879999988,
+        641.2656239999978,
+        721.2102610000002,
+        668.9942180000016,
+        699.8962499999998,
+        683.9464060000009,
+        648.4107290000011,
+        642.1679170000007,
+        664.1363529999999,
+        721.6530210000001,
+        655.833228999998,
+        736.6316139999999,
+        701.7352599999995,
+        662.1053639999973,
+        690.228853999999,
+        657.5574479999977,
+        683.7388540000011,
+        641.8757289999976,
+        683.6167189999996,
+        671.3710420000007,
+        720.0516150000003,
+        640.251145000002,
+        714.9914579999986,
+        635.2739579999998,
+        696.4350000000013,
+        647.8841669999983,
+        696.2781250000007
+      ],
+      "mozPerfDurationsAverage": 677.7073574666663
+    },
+    {
+      "title": "startup > moz-content-interactive",
+      "fullTitle": "startup event test > video > startup > moz-content-interactive",
+      "duration": 474290,
+      "mozPerfDurations": [
+        708.7148429999979,
+        676.0841669999991,
+        674.6978640000016,
+        645.7319789999983,
+        642.0192699999989,
+        721.5945319999992,
+        669.7191660000008,
+        700.2745829999985,
+        684.359844999999,
+        648.7806770000007,
+        642.4904690000003,
+        664.4493739999998,
+        722.0498960000004,
+        656.2223439999998,
+        737.1103120000007,
+        702.1786460000003,
+        662.5233329999992,
+        690.605207999999,
+        657.8796359999978,
+        684.1051040000002,
+        642.2539579999993,
+        683.9369790000001,
+        671.7908860000007,
+        720.363021000001,
+        640.5970830000024,
+        715.3028119999999,
+        635.8381770000015,
+        696.9605210000009,
+        648.2049480000005,
+        696.6891660000019
+      ],
+      "mozPerfDurationsAverage": 678.1176266333335
+    },
+    {
+      "title": "startup > moz-app-loaded",
+      "fullTitle": "startup event test > video > startup > moz-app-loaded",
+      "duration": 474290,
+      "mozPerfDurations": [
+        4081.177550999999,
+        3982.687239000001,
+        3897.0028120000006,
+        2376.667395999999,
+        3984.0274469999986,
+        4041.0466670000005,
+        4006.2731740000017,
+        3928.4875520000005,
+        3899.2600519999996,
+        3921.872655000001,
+        4098.674374,
+        3983.089996999999,
+        2511.124739000001,
+        3906.2832289999988,
+        3967.985883000001,
+        3999.9222389999995,
+        3898.7248949999976,
+        3942.806038999999,
+        2469.545520999998,
+        3902.441874000002,
+        4103.105050999999,
+        3994.2206250000017,
+        3933.920260000001,
+        4100.828750000001,
+        2467.3623960000004,
+        4073.474426999999,
+        2422.1171859999995,
+        4045.4303120000004,
+        3944.661354,
+        4063.0564570000006
+      ],
+      "mozPerfDurationsAverage": 3731.575938433332
+    },
+    {
+      "title": "startup > scan-finished",
+      "fullTitle": "startup event test > video > startup > scan-finished",
+      "duration": 474290,
+      "mozPerfDurations": [
+        4086.4116139999987,
+        3984.8954170000015,
+        4024.4433320000007,
+        2377.2352079999982,
+        3987.049112999999,
+        4043.4107289999993,
+        4010.206456,
+        3931.000572000001,
+        3903.533437,
+        3924.4128630000014,
+        4103.510364,
+        3985.6274460000004,
+        2513.654425999999,
+        3908.769375,
+        3971.777551000001,
+        4002.402604000001,
+        3901.055624999999,
+        4073.585258000001,
+        2471.9251559999993,
+        3905.380207,
+        4110.972967999998,
+        3999.2934370000003,
+        4065.6044789999996,
+        4105.027761000001,
+        2467.7184380000017,
+        4075.847238999999,
+        2424.333593000001,
+        4048.033958000002,
+        3946.976145999999,
+        4066.4575000000004
+      ],
+      "mozPerfDurationsAverage": 3747.3517424
+    }
+  ]
+}
+]

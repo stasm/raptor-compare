@@ -4,7 +4,7 @@
 
 var util = require('util');
 var argv = require('minimist')(process.argv.slice(2));
-var tps = require('../lib/index.js');
+var tps = require('../src/tps.js');
 
 switch(argv._.length) {
   case 0:
@@ -22,4 +22,4 @@ switch(argv._.length) {
     process.exit(1);
 }
 
-tps.execute(argv);
+tps.print(argv);
