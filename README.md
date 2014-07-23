@@ -49,7 +49,9 @@ events.  For these measurements it is valid to assume that the patch improved
 the performance by 30 milliseconds.
 
 The remaining results, including the apparent 133 ms speed-up, are not 
-significant and might be due to a random instability of the data.
+significant and might be caused by a random instability of the data.  Try 
+increasing the sample size (via the `RUNS` variable; see below) and run 
+`test-perf` again.
 
 
 Installation
@@ -69,7 +71,7 @@ use a `local.mk` file):
 
 Then, run `test-perf`:
 
-    $ APPS="settings sms" MOZPERFOUT=file1.json make test-perf
+    $ APPS="settings sms" RUNS=30 MOZPERFOUT=file1.json make test-perf
 
 [Gaia performance tests]: https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests
 
