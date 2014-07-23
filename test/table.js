@@ -24,8 +24,7 @@ suite('Delta builder', function() {
   });
 
   test('Both apps have data', function() {
-    var t = table.delta('settings', results[0].settings, results[1].settings);
-    assert.deepEqual(t.rows, [
+    var expected = [
       { 
         'settings (means in ms)': 'moz-chrome-dom-loaded',
         Base: 833.536562366667,
@@ -61,12 +60,15 @@ suite('Delta builder', function() {
         'Δ': -27.465983099999903,
         'Sig?': true 
       }
-    ]);
+    ];
+    var t = table.delta('settings', results[0].settings, results[1].settings);
+    expected.forEach(function(ref, i) {
+      assert.deepEqual(t.rows[i], ref);
+    });
   });
 
   test('1st app has data, 2nd does not', function() {
-    var t = table.delta('email', results[0].email, results[1].email);
-    assert.deepEqual(t.rows, [
+    var expected = [
       {
         'email (means in ms)': 'moz-chrome-dom-loaded',
         Base: 337.4005519666667,
@@ -102,12 +104,15 @@ suite('Delta builder', function() {
         'Δ': '—',
         'Sig?': '—'
       }
-    ]);
+    ];
+    var t = table.delta('email', results[0].email, results[1].email);
+    expected.forEach(function(ref, i) {
+      assert.deepEqual(t.rows[i], ref);
+    });
   });
 
   test('1st app does not have data, 2nd does', function() {
-    var t = table.delta('calendar', results[0].calendar, results[1].calendar);
-    assert.deepEqual(t.rows, [
+    var expected = [
       {
         'calendar (means in ms)': 'moz-chrome-dom-loaded',
         Base: '—',
@@ -143,12 +148,15 @@ suite('Delta builder', function() {
         'Δ': '—',
         'Sig?': '—'
       }
-    ]);
+    ];
+    var t = table.delta('calendar', results[0].calendar, results[1].calendar);
+    expected.forEach(function(ref, i) {
+      assert.deepEqual(t.rows[i], ref);
+    });
   });
 
   test('Neither app has data', function() {
-    var t = table.delta('clock', results[0].clock, results[1].clock);
-    assert.deepEqual(t.rows, [
+    var expected = [
       { 
         'clock (means in ms)': 'moz-chrome-dom-loaded',
         Base: '—',
@@ -184,6 +192,10 @@ suite('Delta builder', function() {
         'Δ': '—',
         'Sig?': '—'
       }
-    ]);
+    ];
+    var t = table.delta('clock', results[0].clock, results[1].clock);
+    expected.forEach(function(ref, i) {
+      assert.deepEqual(t.rows[i], ref);
+    });
   });
 });
