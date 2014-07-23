@@ -13,6 +13,9 @@
     "b2g"
   ],
   "bin": "./bin/cli.js",
+  "scripts": {
+    "test": "gulp test"
+  },
   "dependencies": {
     "minimist": "~0.1.0",
     "ttest": "~0.3.0",
