@@ -23,8 +23,11 @@ function print(tables) {
     table => console.log(table.toString()));
 }
 
+exports.exec = function(filenames) {
+  return read(filenames).then(
+    Function.prototype.apply.bind(compare, null));
+};
+
 exports.print = function(argv) {
-  return read(argv._).then(
-    Function.prototype.apply.bind(compare, null)).then(
-    print);
+  return exports.exec(argv._).then(print);
 };

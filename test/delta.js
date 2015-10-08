@@ -4,198 +4,84 @@
 
 var path = require('path');
 var assert = require('assert');
-var tps = require('../src/tps.js');
-var table = require('../src/table.js');
+var exec = require('../src/index').exec;
 
 suite('Delta builder', function() {
   var results;
 
   suiteSetup(function(done) {
-    var argv = {
-      _: [
-        path.join(__dirname, 'fixtures', 'output1.json'),
-        path.join(__dirname, 'fixtures', 'output2.json')
-      ]
-    };
-    tps.execute(argv, function(argv, res) {
-      results = res;
+    var filenames = [
+      path.join(__dirname, 'fixtures', 'output1.json'),
+      path.join(__dirname, 'fixtures', 'output2.json')
+    ];
+    exec(filenames).then(tables => {
+      results = tables;
       done();
     });
   });
 
   test('Both apps have data', function() {
-    var expected = [
-      { 
-        'settings (means in ms)': 'moz-chrome-dom-loaded',
-        Base: 833.536562366667,
-        Patch: 803.0440761333332,
-        'Δ': -30.492486233333807,
-        'Sig?': false 
-      },
-      { 
-        'settings (means in ms)': 'moz-chrome-interactive',
-        Base: 834.1399790333334,
-        Patch: 803.7857168000003,
-        'Δ': -30.35426223333309,
-        'Sig?': false 
-      },
-      { 
-        'settings (means in ms)': 'moz-app-visually-complete',
-        Base: 3878.400572166667,
-        Patch: 3745.1576740333335,
-        'Δ': -133.2428981333337,
-        'Sig?': true 
-      },
-      { 
-        'settings (means in ms)': 'moz-content-interactive',
-        Base: 3878.9074489333343,
-        Patch: 3746.1781270333345,
-        'Δ': -132.72932189999983,
-        'Sig?': true 
-      },
-      { 
-        'settings (means in ms)': 'moz-app-loaded',
-        Base: 5742.317133666667,
-        Patch: 5714.8511505666675,
-        'Δ': -27.465983099999903,
-        'Sig?': true 
-      }
-    ];
-    var t = table.delta('settings', results[0].settings, results[1].settings);
+    var expected = [{
+      'music.gaiamobile.org': 'navigationLoaded',
+      'Try 1': 696.2,
+      'Try 2': 734.2,
+      'Δ': 38,
+      'Δ %': 0.054582016661878764,
+      'Sig?': true
+    }, {
+      'music.gaiamobile.org': 'navigationInteractive',
+      'Try 1': 719.7,
+      'Try 2': 757.2,
+      'Δ': 37.5,
+      'Δ %': 0.05210504376823676,
+      'Sig?': true 
+    }, {
+      'music.gaiamobile.org': 'visuallyLoaded',
+      'Try 1': 1318.5,
+      'Try 2': 1228.4,
+      'Δ': -90.09999999999991,
+      'Δ %': -0.06833522942737953,
+      'Sig?': false
+    }, {
+      'music.gaiamobile.org': 'contentInteractive',
+      'Try 1': 1318.5,
+      'Try 2': 1228.6,
+      'Δ': -89.90000000000009,
+      'Δ %': -0.0681835419036785,
+      'Sig?': false
+    }, {
+      'music.gaiamobile.org': 'fullyLoaded',
+      'Try 1': 1458.9,
+      'Try 2': 1448.5,
+      'Δ': -10.400000000000091,
+      'Δ %': -0.0071286585783810336,
+      'Sig?': true
+    }, {
+      'music.gaiamobile.org': 'pss',
+      'Try 1': 23.637399999999996,
+      'Try 2': 23.104900000000004,
+      'Δ': -0.5324999999999918,
+      'Δ %': -0.022527858393900847,
+      'Sig?': true
+    }, {
+      'music.gaiamobile.org': 'uss',
+      'Try 1': 20.0153,
+      'Try 2': 19.432,
+      'Δ': -0.5833000000000013,
+      'Δ %': -0.029142705830040083,
+      'Sig?': true
+    }, {
+      'music.gaiamobile.org': 'rss',
+      'Try 1': 39.8039,
+      'Try 2': 39.246900000000004,
+      'Δ': -0.556999999999995,
+      'Δ %': -0.013993603641854067,
+      'Sig?': true
+    }];
+
     expected.forEach(function(ref, i) {
-      assert.deepEqual(t.rows[i], ref);
+      assert.deepEqual(results[0].rows[i], ref);
     });
   });
 
-  test('1st app has data, 2nd does not', function() {
-    var expected = [
-      {
-        'email (means in ms)': 'moz-chrome-dom-loaded',
-        Base: 337.4005519666667,
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—'
-      },
-      {
-        'email (means in ms)': 'moz-chrome-interactive',
-        Base: 2002.9526091666667,
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—' 
-      },
-      {
-        'email (means in ms)': 'moz-app-visually-complete',
-        Base: 338.53880379999987,
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—' 
-      },
-      {
-        'email (means in ms)': 'moz-content-interactive',
-        Base: 2002.3504892999997,
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—' 
-      },
-      {
-        'email (means in ms)': 'moz-app-loaded',
-        Base: 2778.1574161666667,
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—'
-      }
-    ];
-    var t = table.delta('email', results[0].email, results[1].email);
-    expected.forEach(function(ref, i) {
-      assert.deepEqual(t.rows[i], ref);
-    });
-  });
-
-  test('1st app does not have data, 2nd does', function() {
-    var expected = [
-      {
-        'calendar (means in ms)': 'moz-chrome-dom-loaded',
-        Base: '—',
-        Patch: 793.4649166333335,
-        'Δ': '—',
-        'Sig?': '—'
-      },
-      {
-        'calendar (means in ms)': 'moz-chrome-interactive',
-        Base: '—',
-        Patch: 793.9191769,
-        'Δ': '—',
-        'Sig?': '—'
-      },
-      {
-        'calendar (means in ms)': 'moz-app-visually-complete',
-        Base: '—',
-        Patch: 855.7066578666665,
-        'Δ': '—',
-        'Sig?': '—'
-      },
-      {
-        'calendar (means in ms)': 'moz-content-interactive',
-        Base: '—',
-        Patch: 856.2182966000003,
-        'Δ': '—',
-        'Sig?': '—'
-      },
-      {
-        'calendar (means in ms)': 'moz-app-loaded',
-        Base: '—',
-        Patch: 1342.2273035,
-        'Δ': '—',
-        'Sig?': '—'
-      }
-    ];
-    var t = table.delta('calendar', results[0].calendar, results[1].calendar);
-    expected.forEach(function(ref, i) {
-      assert.deepEqual(t.rows[i], ref);
-    });
-  });
-
-  test('Neither app has data', function() {
-    var expected = [
-      { 
-        'clock (means in ms)': 'moz-chrome-dom-loaded',
-        Base: '—',
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—' 
-      },
-      { 
-        'clock (means in ms)': 'moz-chrome-interactive',
-        Base: '—',
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—' 
-      },
-      { 
-        'clock (means in ms)': 'moz-app-visually-complete',
-        Base: '—',
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—' 
-      },
-      { 
-        'clock (means in ms)': 'moz-content-interactive',
-        Base: '—',
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—' 
-      },
-      { 
-        'clock (means in ms)': 'moz-app-loaded',
-        Base: '—',
-        Patch: '—',
-        'Δ': '—',
-        'Sig?': '—'
-      }
-    ];
-    var t = table.delta('clock', results[0].clock, results[1].clock);
-    expected.forEach(function(ref, i) {
-      assert.deepEqual(t.rows[i], ref);
-    });
-  });
 });
