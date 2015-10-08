@@ -1,39 +1,15 @@
-test-perf-summary [![Build Status][travisimage]][travislink]
+raptor-compare [![Build Status][travisimage]][travislink]
 ============================================================
 
-[travisimage]: https://travis-ci.org/stasm/test-perf-summary.png?branch=master
-[travislink]: https://travis-ci.org/stasm/test-perf-summary
+[travisimage]: https://travis-ci.org/stasm/raptor-compare.png?branch=master
+[travislink]: https://travis-ci.org/stasm/raptor-compare
 
-Pretty-print the results of Gaia's `make test-perf`.
-
-
-Summary mode
-------------
-
-The summary mode prints basic descriptive statistics (median, mean and 
-standard deviation) in a table.
-
-    $ test-perf-summary file1.json
-
-    settings                   Median  Mean  Stdev
-    -------------------------  ------  ----  -----
-    moz-chrome-dom-loaded         831   834     49
-    moz-chrome-interactive        832   834     49
-    moz-app-visually-complete    3619  3878   1725
-    moz-content-interactive      3620  3879   1725
-    moz-app-loaded               5142  5742   1761
-
-
-
-Delta mode
-----------
-
-The delta mode computes the differences between two runs of Gaia's `test-perf` 
-and tests them for statistical significance ([t-test][] with 0.05 alpha).
+Test two sets of Raptor results for statistical significance ([t-test][] with 
+0.05 alpha).
 
 [t-test]: https://en.wikipedia.org/wiki/Student%27s_t-test
 
-    $ test-perf-summary file1.json file2.json
+    $ raptor-compare file1.json file2.json
 
     settings (means in ms)     Base  Patch  Δ     Sig?
     -------------------------  ----  -----  ----  ----
@@ -43,37 +19,41 @@ and tests them for statistical significance ([t-test][] with 0.05 alpha).
     moz-content-interactive    3879   3746  -133      
     moz-app-loaded             5742   5715   -27      
 
-In the example above, the `test-perf` measurements for the Settings app were 
+In the example above, Raptor measurements for the Settings app were 
 only stable enough for the `moz-chrome-dom-loaded` and `moz-chrome-interactive` 
 events.  For these measurements it is valid to assume that the patch improved 
 the performance by 30 milliseconds.
 
 The remaining results, including the apparent 133 ms speed-up, are not 
 significant and might be caused by a random instability of the data.  Try 
-increasing the sample size (via the `RUNS` variable; see below) and run 
-`test-perf` again.
+increasing the sample size (via Raptor's `--runs` option; see below) and run 
+Raptor again.
 
 
 Installation
 ------------
 
-    npm install -g test-perf-summary
+    npm install -g raptor-compare
 
 
-Running Gaia perf tests
------------------------
+Running Raptor tests
+--------------------
 
-For best results, follow the [Gaia performance tests][] guide on MDN.  Connect 
-your device to the computer and make sure you export the following variable (I 
-use a `local.mk` file):
+(For best results, follow the [Raptor][] guide on MDN.)
 
-    MARIONETTE_RUNNER_HOST=marionette-device-host
+Install Raptor with:
 
-Then, run `test-perf`:
+    $ sudo npm install -g @mozilla/raptor
 
-    $ APPS="settings sms" RUNS=30 MOZPERFOUT=file1.json make test-perf
+Connect your device to the computer, go into you Gaia directory and build Gaia:
 
-[Gaia performance tests]: https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests
+    $ make raptor
+
+Then, run the desired perf test and save the output to a JSON file:
+
+    $ raptor test coldlaunch --runs 30 --output json --app music > file1.json
+
+[Raptor]: https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/Raptor
 
 
 Running tests
