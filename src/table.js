@@ -1,44 +1,25 @@
 'use strict';
 
-var ttest = require('ttest');
-var summary = require('summary');
-var Table = require('easy-table');
+const ttest = require('ttest');
+const summary = require('summary');
+const Table = require('easy-table');
 
 function printSig(val) {
   return !val ? '*' : '';
 }
 
-exports.delta = function(appName, baseApp, patchedApp) {
-  var t = new Table();
-  var base, patch;
+module.exports = function(origin, try1, try2) {
+  return Object.keys(try1).reduce((t, mark) => {
+    t.cell(origin, mark);
 
-  for (var i = 0, evt; evt = Object.keys(baseApp)[i]; i++) {
-    t.cell(appName, evt);
+    const summary1 = summary(try1[mark]);
+    const summary2 = summary(try2[mark]);
+    t.cell('Try 1', summary1.mean(), Table.Number(0));
+    t.cell('try 2', summary2.mean(), Table.Number(0));
+    t.cell('Δ', summary2.mean() - summary1.mean(), Table.Number(0));
+    t.cell('Sig?', ttest(summary1._data, summary2._data).valid(), printSig);
 
-    if (baseApp[evt]) {
-      base = summary(baseApp[evt]);
-      t.cell('Base', base.mean(), Table.Number(0));
-    } else {
-      t.cell('Base', '—', Table.LeftPadder());
-    }
+    return t.newRow();
 
-    if (patchedApp[evt]) {
-      patch = summary(patchedApp[evt]);
-      t.cell('Patch', patch.mean(), Table.Number(0));
-    } else {
-      t.cell('Patch', '—', Table.LeftPadder());
-    }
-
-    if (baseApp[evt] && patchedApp[evt]) {
-      t.cell('Δ', patch.mean() - base.mean(), Table.Number(0));
-      t.cell('Sig?', ttest(base._data, patch._data).valid(), printSig);
-    } else {
-      t.cell('Δ', '—', Table.LeftPadder());
-      t.cell('Sig?', '—', Table.LeftPadder());
-    }
-
-    t.newRow();
-  }
-
-  return t;
+  }, new Table());
 };

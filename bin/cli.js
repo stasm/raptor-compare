@@ -2,9 +2,9 @@
 
 'use strict';
 
-var util = require('util');
-var tps = require('../src/tps.js');
-var argv = require('minimist')(process.argv.slice(2));
+const util = require('util');
+const print = require('../src/index').print;
+const argv = require('minimist')(process.argv.slice(2));
 
 switch(argv._.length) {
   case 0:
@@ -18,4 +18,4 @@ switch(argv._.length) {
     process.exit(1);
 }
 
-tps.print(argv);
+print(argv);
