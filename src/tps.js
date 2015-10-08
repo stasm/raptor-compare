@@ -7,7 +7,6 @@ var parse = require('./parse.js').parse;
 var table = require('./table.js');
 
 function printAll(argv, results) {
-  var t;
   var appNames = [];
   if (argv.app) {
     appNames = appNames.concat(argv.app);
@@ -16,11 +15,7 @@ function printAll(argv, results) {
   }
 
   for (var i = 0, app; app = appNames[i]; i++) {
-    if (argv.delta && results[1][app]) {
-      t = table.delta(app, results[0][app], results[1][app]);
-    } else {
-      t = table.summary(app, results[0][app]);
-    }
+    var t = table.delta(app, results[0][app], results[1][app]);
     util.puts(t.toString());
   }
 }

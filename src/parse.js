@@ -1,15 +1,15 @@
 'use strict';
 
 exports.parse = function(json) {
-  var apps = {};
-  for (var i = 0, app; app = json[i]; i++) {
-    var name = app.stats.application.trim();
-    apps[name] = {};
-
-    for (var j = 0, pass; pass = app.passes[j]; j++) {
-      apps[name][pass.title.trim()] = pass.mozPerfDurations;
-    }
-
+  var measurements = {};
+  for (var origin in json) {
+    measurements[origin] = json[origin].reduce(extractValues, {});
   }
-  return apps;
+  return measurements;
 };
+
+function extractValues(seq, cur) {
+  return Object.assign(seq, {
+    [cur.Metric]: cur.Values
+  });
+}
