@@ -11,20 +11,23 @@ Test two sets of Raptor results for statistical significance ([t-test][] with
 
     $ raptor-compare file1.json file2.json
 
-    settings (means in ms)     Base  Patch  Δ     Sig?
-    -------------------------  ----  -----  ----  ----
-    moz-chrome-dom-loaded       834    803   -30  *   
-    moz-chrome-interactive      834    804   -30  *   
-    moz-app-visually-complete  3878   3745  -133      
-    moz-content-interactive    3879   3746  -133      
-    moz-app-loaded             5742   5715   -27      
+    music.gaiamobile.org   Try 1     Try 2     Δ        Δ %  Sig?
+    ---------------------  --------  --------  -------  ---  ----
+    navigationLoaded        696.200   734.200   38.000  +5%      
+    navigationInteractive   719.700   757.200   37.500  +5%      
+    visuallyLoaded         1318.500  1228.400  -90.100  -7%  *   
+    contentInteractive     1318.500  1228.600  -89.900  -7%  *   
+    fullyLoaded            1458.900  1448.500  -10.400  -1%      
+    pss                      23.637    23.105   -0.532  -3%      
+    uss                      20.015    19.432   -0.583  -3%      
+    rss                      39.804    39.247   -0.557  -2%      
 
-In the example above, Raptor measurements for the Settings app were 
-only stable enough for the `moz-chrome-dom-loaded` and `moz-chrome-interactive` 
-events.  For these measurements it is valid to assume that the patch improved 
-the performance by 30 milliseconds.
+In the example above, Raptor measurements for the Music app were only stable 
+enough for the `visuallyLoaded` and `contentInteractive` events.  For these 
+measurements it is valid to assume that the patch improved the performance by 
+90 milliseconds.
 
-The remaining results, including the apparent 133 ms speed-up, are not 
+The remaining results, including the apparent smaller memory footprint, are not 
 significant and might be caused by a random instability of the data.  Try 
 increasing the sample size (via Raptor's `--runs` option; see below) and run 
 Raptor again.
