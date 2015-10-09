@@ -4,33 +4,53 @@ raptor-compare [![Build Status][travisimage]][travislink]
 [travisimage]: https://travis-ci.org/stasm/raptor-compare.png?branch=master
 [travislink]: https://travis-ci.org/stasm/raptor-compare
 
-Test two sets of Raptor results for statistical significance ([t-test][] with 
-0.05 alpha).
+Compare sets of Raptor results and test for their statistical significance 
+([t-test][] with 0.05 alpha).
 
 [t-test]: https://en.wikipedia.org/wiki/Student%27s_t-test
 
-    $ raptor-compare file1.json file2.json
+    $ raptor-compare my_test.ldjson
 
-    music.gaiamobile.org   Try 1     Try 2     Δ        Δ %  Sig?
-    ---------------------  --------  --------  -------  ---  ----
-    navigationLoaded        696.200   734.200   38.000  +5%      
-    navigationInteractive   719.700   757.200   37.500  +5%      
-    visuallyLoaded         1318.500  1228.400  -90.100  -7%  *   
-    contentInteractive     1318.500  1228.600  -89.900  -7%  *   
-    fullyLoaded            1458.900  1448.500  -10.400  -1%      
-    pss                      23.637    23.105   -0.532  -3%      
-    uss                      20.015    19.432   -0.583  -3%      
-    rss                      39.804    39.247   -0.557  -2%      
+    music.gaiamobile.org   base: 370b  1: 55f6  1: delta  1: p-value
+    ---------------------  ----------  -------  --------  ----------
+    navigationLoaded              711      726        14        0.06
+    navigationInteractive         737      748        12        0.10
+    visuallyLoaded               1322     1217      -105      * 0.00
+    contentInteractive           1323     1217      -105      * 0.00
+    fullyLoaded                  1462     1442       -20        0.14
+    uss                        19.881   20.370     0.489      * 0.00
+    pss                        23.468   23.981     0.513      * 0.00
+    rss                        39.640   40.152     0.512      * 0.00
 
-In the example above, Raptor measurements for the Music app were only stable 
-enough for the `visuallyLoaded` and `contentInteractive` events.  For these 
-measurements it is valid to assume that the patch improved the performance by 
-90 milliseconds.
+In the example above, Raptor measurements for the Music app were stable for the 
+`visuallyLoaded` and `contentInteractive` events, as indicated by the asterisks 
+next to the p-values.  At the same time, we can see that the memory footprint 
+has regressed: the mean `uss` usage is higher than the base measurement and the 
+difference is statistically significant as well.
 
-The remaining results, including the apparent smaller memory footprint, are not 
+For all measurements marked with the asterisk (`*`) it is valid to assume that 
+the means are indeed significantly different between the base and the try runs.
+
+The remaining results, e.g. the 20 ms `fullyLoaded` speed-up, are not 
 significant and might be caused by a random instability of the data.  Try 
 increasing the sample size (via Raptor's `--runs` option; see below) and run 
 Raptor again.
+
+
+What is p-value?
+----------------
+
+The p-value is a concept used in statistical testing which represents our 
+willingness to make mistakes about the data.  A low p-value means that there's 
+only a small risk of making a mistake by concluding that the test data 
+indicates that the means are truly different and that the observed differences 
+are not due to poor sampling and randomness.
+
+For the data above, a p-value of 0.14 for `fullyLoaded` means that the risk of 
+being wrong is 14% when we conclude that the 20 ms difference between the means 
+is due to an actual code change and not to randomness.
+
+Good p-values are below 0.05.
 
 
 Installation
@@ -52,9 +72,15 @@ Connect your device to the computer, go into you Gaia directory and build Gaia:
 
     $ make raptor
 
-Then, run the desired perf test and save the output to a JSON file:
+Then, run the desired perf test:
 
-    $ raptor test coldlaunch --runs 30 --output json --app music > file1.json
+    $ raptor test coldlaunch --runs 30 --app music --metrics my_test.ldjson
+
+Raptor will print the output to `stdout`.  The raw data will be saved in the 
+`ldjson` file specified in the `--metrics` option.  The data is appended so you 
+can runmultiple tests for different revisions and apps and `raptor-compare` 
+will figure out how to handle it.  All testing is conducted relative to the 
+first result set for the given app.
 
 [Raptor]: https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/Raptor
 
