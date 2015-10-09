@@ -12,8 +12,9 @@ module.exports = function(obj) {
     {});
 };
 
-const newmap = () => new Map();
-const newarr = () => [];
+const newOrigin = () => new Map();
+const newSeries = (rev) => new Map([['rev', rev], ['data', new Map()]]);
+const newValues = () => [];
 
 function get(map, key, def) {
   if (map.has(key)) {
@@ -27,11 +28,12 @@ function get(map, key, def) {
 
 function parse(results, point) {
   const origin = get(
-    results, point.tags.context, newmap);
+    results, point.tags.context, newOrigin);
   const series = get(
-    origin, point.timestamp.slice(0, point.timestamp.length - 6), newmap);
+    origin, point.timestamp.slice(0, point.timestamp.length - 6),
+    () => newSeries(point.tags.revisionId));
   const values = get(
-    series, point.tags.metric, newarr);
+    series.get('data'), point.tags.metric, newValues);
   values.push(point.fields.value);
   return results;
 }
