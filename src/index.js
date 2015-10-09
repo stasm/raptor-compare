@@ -16,13 +16,13 @@ function print(tables) {
     table => console.log(table.toString()));
 }
 
-exports.exec = function(filename) {
+function main(filename) {
   return read(fs.createReadStream(filename))
     .then(parse)
     .then(compare)
+    .then(print)
     .catch(console.error);
-};
+}
 
-exports.print = function(filename) {
-  return exports.exec(filename).then(print);
-};
+exports.compare = compare;
+exports.main = main;

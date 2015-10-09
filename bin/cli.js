@@ -4,7 +4,7 @@
 
 require('babel/register');
 
-const print = require('../src/index').print;
+const main = require('../src').main;
 const argv = require('minimist')(process.argv.slice(2));
 
 if (argv._.length === 0) {
@@ -12,4 +12,4 @@ if (argv._.length === 0) {
   process.exit(1);
 }
 
-print(argv._[0]);
+main(argv._[0]);
