@@ -3,7 +3,7 @@
   "description": "Test Raptor results for statistical significance",
   "version": "0.0.1",
   "author": "Staś Małolepszy <stas@mozilla.com>",
-  "license": "ICS",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/stasm/raptor-compare.git"
@@ -17,18 +17,18 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "easy-table": "~0.3.0",
-    "minimist": "~0.1.0",
+    "easy-table": "^0.3.0",
+    "minimist": "^0.1.0",
     "promisify-node": "^0.2.1",
-    "summary": "~0.3.0",
-    "ttest": "~0.3.0"
+    "summary": "^0.3.2",
+    "ttest": "^0.3.1"
   },
   "engine": {
     "node": ">=4.1"
   },
   "devDependencies": {
-    "mocha": "~1.20.1",
-    "gulp": "~3.8.6",
-    "gulp-mocha": "~0.5.1"
+    "mocha": "^1.20.1",
+    "gulp": "^3.8.6",
+    "gulp-mocha": "^0.5.1"
   }
 }
