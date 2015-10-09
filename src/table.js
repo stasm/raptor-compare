@@ -4,36 +4,31 @@ const ttest = require('ttest');
 const summary = require('summary');
 const Table = require('easy-table');
 
-function printPercent(val) {
-  const prcnt = Math.floor(val * 100);
-  switch (Math.sign(prcnt)) {
-    case 1:
-      return '+' + prcnt + '%';
-    case 0:
-      return '';
-    default:
-      return prcnt + '%';
-  }
+function printPValue(val, width) {
+  const sig = val < 0.05 ? '* ' : '  ';
+  return Table.padLeft(sig + val.toFixed(2), width);
 }
 
-function printSig(val) {
-  return !val ? '*' : '';
-}
-
-module.exports = function(origin, try1, try2) {
-  return Object.keys(try1).reduce((t, mark) => {
+module.exports = function(origin, baseSeries, ...tries) {
+  return Array.from(baseSeries.keys()).reduce((t, mark) => {
     t.cell(origin, mark);
 
-    const summary1 = summary(try1[mark]);
-    const summary2 = summary(try2[mark]);
-    const delta = summary2.mean() - summary1.mean();
-    t.cell('Try 1', summary1.mean(), Table.Number(3));
-    t.cell('Try 2', summary2.mean(), Table.Number(3));
-    t.cell('Δ', delta, Table.Number(3));
-    t.cell('Δ %', delta / summary1.mean(), printPercent);
-    t.cell('Sig?', ttest(summary1._data, summary2._data).valid(), printSig);
+    const numFormat = ['uss', 'pss', 'rss'].includes(mark) ?
+      Table.number(3) : Table.number(0);
+
+    const h0 = summary(baseSeries.get(mark));
+    t.cell('base', h0.mean(), numFormat);
+
+    tries.forEach((trySeries, i) => {
+      i++;
+      const h1 = summary(trySeries.get(mark));
+      const delta = h1.mean() - h0.mean();
+      const pval = ttest(h0._data, h1._data).pValue();
+      t.cell('try ' + i, h1.mean(), numFormat);
+      t.cell('delta ' + i, delta, numFormat);
+      t.cell('p-value ' + i, pval, printPValue);
+    });
 
     return t.newRow();
-
   }, new Table());
 };

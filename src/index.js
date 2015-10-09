@@ -1,21 +1,14 @@
 'use strict';
 
-const promisify = require('promisify-node');
-const fs = promisify('fs');
+const fs = require('fs');
 
-const parse = require('./parse.js');
-const table = require('./table.js');
+const read = require('./read');
+const parse = require('./parse');
+const table = require('./table');
 
-function read(filenames) {
-  return Promise.all(
-    filenames.map(file => fs.readFile(file).then(
-      blob => parse(JSON.parse(blob))))).catch(
-        console.error);
-}
-
-function compare(try1, try2) {
-  return Object.keys(try1).map(
-    origin => table(origin, try1[origin], try2[origin]));
+function compare(results) {
+  return Array.from(results).map(
+    ([origin, tries]) => table(origin, ...tries.values()));
 }
 
 function print(tables) {
@@ -23,11 +16,13 @@ function print(tables) {
     table => console.log(table.toString()));
 }
 
-exports.exec = function(filenames) {
-  return read(filenames).then(
-    Function.prototype.apply.bind(compare, null));
+exports.exec = function(filename) {
+  return read(fs.createReadStream(filename))
+    .then(parse)
+    .then(compare)
+    .catch(console.error);
 };
 
-exports.print = function(argv) {
-  return exports.exec(argv._).then(print);
+exports.print = function(filename) {
+  return exports.exec(filename).then(print);
 };

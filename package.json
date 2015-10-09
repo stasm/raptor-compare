@@ -17,9 +17,10 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "easy-table": "^0.3.0",
+    "babel": "^5.8.23",
+    "easy-table": "^1.0.0",
     "minimist": "^0.1.0",
-    "promisify-node": "^0.2.1",
+    "ndjson": "^1.4.2",
     "summary": "^0.3.2",
     "ttest": "^0.3.1"
   },
