@@ -11,7 +11,7 @@ Compare sets of Raptor results and test for their statistical significance
 
     $ raptor-compare my_test.ldjson
 
-    music.gaiamobile.org   base: 370b  1: 55f6  1: delta  1: p-value
+    music.gaiamobile.org   base: mean  1: mean  1: delta  1: p-value
     ---------------------  ----------  -------  --------  ----------
     navigationLoaded              711      726        14        0.06
     navigationInteractive         737      748        12        0.10
