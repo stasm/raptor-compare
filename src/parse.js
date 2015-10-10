@@ -1,17 +1,5 @@
 'use strict';
 
-const extractValues = (seq, cur) =>
-  Object.assign(
-    seq, { [cur.Metric]: cur.Values });
-
-module.exports = function(obj) {
-  return Object.keys(obj).reduce(
-    (seq, cur) =>
-      Object.assign(
-        seq, { [cur]: obj[cur].reduce(extractValues, {}) }),
-    {});
-};
-
 const newOrigin = () => new Map();
 const newSeries = (rev) => new Map([['rev', rev], ['data', new Map()]]);
 const newValues = () => [];
@@ -34,6 +22,7 @@ function parse(results, point) {
     () => newSeries(point.tags.revisionId));
   const values = get(
     series.get('data'), point.tags.metric, newValues);
+
   values.push(point.fields.value);
   return results;
 }
