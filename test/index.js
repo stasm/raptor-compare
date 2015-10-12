@@ -7,10 +7,12 @@ const assert = require('assert');
 
 const fs = require('fs');
 
+const read = require('../dist/read');
+const parse = require('../dist/parse');
+const compare = require('../dist/index').compare;
+
+// Add support for Map() serialization via JSON.stringify
 require('babel/register');
-const read = require('../src/read');
-const parse = require('../src/parse');
-const compare = require('../src/index').compare
 
 const noop = () => undefined;
 
