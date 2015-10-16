@@ -2,7 +2,7 @@
 
 'use strict';
 
-const main = require('../index').main;
+const main = require('./index').main;
 const argv = require('minimist')(process.argv.slice(2));
 
 if (argv._.length === 0) {

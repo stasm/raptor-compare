@@ -12,7 +12,7 @@
     "firefoxos",
     "b2g"
   ],
-  "bin": "./dist/bin/cli.js",
+  "bin": "./dist/cli.js",
   "scripts": {
     "prepublish": "make",
     "test": "make lint && make test"
