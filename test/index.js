@@ -9,7 +9,7 @@ const fs = require('fs');
 
 const read = require('../dist/read');
 const parse = require('../dist/parse');
-const compare = require('../dist/index').compare;
+const build = require('../dist/build');
 
 // Add support for Map() serialization via JSON.stringify
 require('babel/register');
@@ -55,7 +55,7 @@ suite('Compare', function() {
   test('compares series of runs', function(done) {
     return read(fs.createReadStream(metrics))
       .then(parse)
-      .then(compare)
+      .then(build)
       .then(tables => tables[0].rows.map(removePrinters))
       .then(data => assert.deepEqual(data, expected))
       .then(noop)

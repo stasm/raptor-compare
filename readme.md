@@ -85,11 +85,22 @@ first result set for the given app.
 [Raptor]: https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/Raptor
 
 
-Running tests
--------------
+API
+---
 
-Install [gulp][] with `npm install -g gulp` and run:
+You can also use _raptor-compare_ programmatically.  It exposes three functions 
+for working with Raptor data: `read` reads in a LDJSON stream with the raw 
+metrics data, `parse` aggregates the data into a Map and `build` creates the 
+comparison tables with p-values for significance testing.
 
-    gulp test
+```javascript
+const fs = require('fs');
+const compare = require('raptor-compare');
 
-[gulp]: http://gulpjs.com/
+compare.read(fs.createReadStream(filename))
+  .then(compare.parse)
+  .then(compare.build)
+  .then(tables => tables.forEach(
+    table => console.log(table.toString())))
+  .catch(console.error);
+```

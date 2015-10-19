@@ -12,6 +12,7 @@
     "firefoxos",
     "b2g"
   ],
+  "main": "./dist/api.js",
   "bin": "./dist/cli.js",
   "scripts": {
     "prepublish": "make",

@@ -4,12 +4,7 @@ const fs = require('fs');
 
 const read = require('./read');
 const parse = require('./parse');
-const table = require('./table');
-
-function compare(results) {
-  return Array.from(results).map(
-    ([origin, tries]) => table(origin, ...tries.values()));
-}
+const build = require('./build');
 
 function print(tables) {
   return tables.forEach(
@@ -19,10 +14,9 @@ function print(tables) {
 function main(filename) {
   return read(fs.createReadStream(filename))
     .then(parse)
-    .then(compare)
+    .then(build)
     .then(print)
     .catch(console.error);
 }
 
-exports.compare = compare;
 exports.main = main;
