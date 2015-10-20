@@ -94,6 +94,9 @@ metrics data, `parse` aggregates the data into a Map and `build` creates the
 comparison tables with p-values for significance testing.
 
 ```javascript
+// Needed for Node.js 0.10 and 0.12.
+require('babel/polyfill');
+
 const fs = require('fs');
 const compare = require('raptor-compare');
 

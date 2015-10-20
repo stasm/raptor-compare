@@ -16,7 +16,7 @@ function main(filename) {
     .then(parse)
     .then(build)
     .then(print)
-    .catch(console.error);
+    .catch(err => console.log(err.stack));
 }
 
 exports.main = main;

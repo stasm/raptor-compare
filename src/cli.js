@@ -2,6 +2,8 @@
 
 'use strict';
 
+require('babel/polyfill');
+
 const main = require('./index').main;
 const argv = require('minimist')(process.argv.slice(2));
 
