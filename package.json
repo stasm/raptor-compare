@@ -19,6 +19,7 @@
     "test": "make lint && make test"
   },
   "dependencies": {
+    "babel": "^5.8.23",
     "easy-table": "^1.0.0",
     "minimist": "^0.1.0",
     "ndjson": "^1.4.2",
@@ -29,7 +30,6 @@
     "node": ">=4.1"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
     "babel-plugin-array-includes": "^1.1.1",
     "eslint": "^1.6.0",
     "mocha": "^2.3.3"
